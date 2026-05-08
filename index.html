@@ -1,1222 +1,1826 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parcelin — Worry-Free Partner untuk Brand Kamu</title>
-<meta name="description" content="Parcelin adalah creative production partner untuk custom packaging, printing, merchandise, dan brand materials. Konsultasi gratis, proses transparan, timeline pasti.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,800;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Buku Panduan SOP Sales Digital — ParcelinPack 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
 <style>
-  :root {
-    --ink: #1B1540;
-    --ink-mid: #2E2760;
-    --purple: #4035A0;
-    --purple-light: #6358C8;
-    --cream: #FAF8F4;
-    --cream-dark: #F2EDE6;
-    --orange: #F05A28;
-    --orange-light: #FF7C4D;
-    --white: #FFFFFF;
-    --muted: #7D7A8A;
-    --border: rgba(27,21,64,0.1);
-  }
+:root{
+  --ink:#1A1033;
+  --ink2:#3D3162;
+  --ink3:#6B5E8A;
+  --ink4:#9E93B8;
+  --bg:#F7F5FF;
+  --bg2:#EEE9FF;
+  --white:#FFFFFF;
+  --purple:#5B35D5;
+  --purple-l:#7C5CE8;
+  --purple-d:#3D1FA8;
+  --purple-pale:#EDE8FF;
+  --purple-pale2:#F5F3FF;
+  --teal:#00A98F;
+  --teal-d:#007A69;
+  --teal-l:#33C4AD;
+  --teal-pale:#E0F7F4;
+  --teal-pale2:#F0FBF9;
+  --orange:#FF6B2B;
+  --orange-d:#CC4E12;
+  --orange-l:#FF8C5A;
+  --orange-pale:#FFF0E8;
+  --amber:#F5A623;
+  --amber-pale:#FEF6E4;
+  --red:#E53E3E;
+  --red-pale:#FFF0F0;
+  --green:#27AE60;
+  --green-pale:#E6F9EE;
+  --border:#E2DCF8;
+  --shadow:0 2px 12px rgba(91,53,213,.08);
+  --shadow2:0 4px 24px rgba(91,53,213,.12);
+  --r:14px;
+  --r2:10px;
+  --r3:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.65;
+  font-size:15px;
+}
+a{color:var(--purple);text-decoration:none}
+a:hover{text-decoration:underline}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── PRINT ── */
+@media print{
+  .no-print{display:none!important}
+  body{background:#fff;font-size:12px}
+  .section-card{break-inside:avoid;box-shadow:none;border:1px solid #ddd}
+  .cover{page-break-after:always}
+  .toc-page{page-break-after:always}
+  h2.chapter-title{page-break-before:always}
+}
 
-  html { scroll-behavior: smooth; }
+/* ── LAYOUT ── */
+.page-wrap{max-width:900px;margin:0 auto;padding:24px 16px 80px}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    overflow-x: hidden;
-  }
+/* ── COVER ── */
+.cover{
+  background:linear-gradient(135deg,#3D1FA8 0%,#5B35D5 40%,#7C5CE8 70%,#00A98F 100%);
+  border-radius:24px;
+  padding:56px 48px 64px;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  margin-bottom:32px;
+}
+.cover::before{
+  content:'';
+  position:absolute;
+  top:-60px;right:-60px;
+  width:300px;height:300px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+}
+.cover::after{
+  content:'';
+  position:absolute;
+  bottom:-80px;left:-40px;
+  width:250px;height:250px;
+  border-radius:50%;
+  background:rgba(0,169,143,.15);
+}
+.cover-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:100px;
+  padding:5px 14px;
+  font-size:12px;font-weight:600;
+  letter-spacing:.5px;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.cover h1{
+  font-family:'Sora',sans-serif;
+  font-size:38px;font-weight:800;
+  line-height:1.15;
+  margin-bottom:10px;
+  position:relative;z-index:1;
+}
+.cover h1 span{color:#7FFFD4}
+.cover-sub{
+  font-size:17px;opacity:.85;margin-bottom:32px;
+  position:relative;z-index:1;
+}
+.cover-meta{
+  display:flex;flex-wrap:wrap;gap:12px;
+  position:relative;z-index:1;
+}
+.cover-tag{
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:8px;padding:6px 14px;
+  font-size:12px;font-weight:500;
+}
+.cover-edition{
+  margin-top:36px;
+  font-size:12px;opacity:.6;
+  position:relative;z-index:1;
+}
 
-  /* ── NAVBAR ── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    height: 68px;
-    background: rgba(250,248,244,0.92);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
-  }
+/* ── TOC ── */
+.toc-page{
+  background:var(--white);
+  border-radius:var(--r);
+  box-shadow:var(--shadow);
+  padding:36px 40px;
+  margin-bottom:32px;
+}
+.toc-title{
+  font-family:'Sora',sans-serif;
+  font-size:22px;font-weight:700;
+  color:var(--purple-d);
+  margin-bottom:24px;
+  padding-bottom:12px;
+  border-bottom:2px solid var(--purple-pale);
+}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.toc-item{
+  display:flex;align-items:center;gap:10px;
+  padding:9px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:background .15s;
+  text-decoration:none;color:var(--ink);
+}
+.toc-item:hover{background:var(--purple-pale);color:var(--purple-d)}
+.toc-num{
+  width:28px;height:28px;border-radius:6px;
+  background:var(--purple-pale);
+  color:var(--purple);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;
+  flex-shrink:0;
+}
+.toc-label{font-size:13px;font-weight:500}
 
-  .nav-logo {
-    font-family: 'Fraunces', serif;
-    font-size: 1.45rem;
-    font-weight: 800;
-    color: var(--ink);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
-  .nav-logo span { color: var(--orange); }
+/* ── CHAPTER HEADER ── */
+.chapter-header{
+  display:flex;align-items:flex-start;gap:16px;
+  margin:40px 0 20px;
+}
+.ch-icon{
+  width:48px;height:48px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+}
+.ch-text{}
+.chapter-title{
+  font-family:'Sora',sans-serif;
+  font-size:22px;font-weight:700;
+  color:var(--ink);
+  margin-bottom:2px;
+}
+.chapter-sub{font-size:13px;color:var(--ink3)}
 
-  .nav-cta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+/* ── CARDS ── */
+.section-card{
+  background:var(--white);
+  border-radius:var(--r);
+  box-shadow:var(--shadow);
+  padding:24px 28px;
+  margin-bottom:16px;
+}
+.section-card.purple{background:var(--purple-pale2);border:1px solid var(--border)}
+.section-card.teal{background:var(--teal-pale2);border:1px solid #B2E8E1}
+.section-card.orange{background:var(--orange-pale);border:1px solid #FFDAC7}
+.section-card.amber{background:var(--amber-pale);border:1px solid #FAE3B0}
+.section-card.dark{background:linear-gradient(135deg,var(--purple-d),var(--purple));color:#fff}
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px 20px;
-    border-radius: 100px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.22s ease;
-    white-space: nowrap;
-    border: none;
-  }
-  .btn-primary {
-    background: var(--orange);
-    color: white;
-  }
-  .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(240,90,40,0.35); }
-  .btn-outline {
-    background: transparent;
-    color: var(--ink);
-    border: 1.5px solid var(--border);
-  }
-  .btn-outline:hover { background: var(--ink); color: white; }
-  .btn-wa {
-    background: #25D366;
-    color: white;
-  }
-  .btn-wa:hover { background: #1dba5a; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
-  .btn-purple {
-    background: var(--purple);
-    color: white;
-  }
-  .btn-purple:hover { background: var(--purple-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(64,53,160,0.3); }
-  .btn-lg {
-    padding: 14px 32px;
-    font-size: 0.95rem;
-  }
+.card-title{
+  font-family:'Sora',sans-serif;
+  font-size:16px;font-weight:700;
+  margin-bottom:12px;
+  color:var(--ink);
+  display:flex;align-items:center;gap:8px;
+}
+.section-card.dark .card-title{color:#fff}
 
-  /* ── HERO ── */
-  #hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 120px 5% 80px;
-    gap: 60px;
-    position: relative;
-    overflow: hidden;
-  }
+/* ── LABELS ── */
+.label-sm{
+  font-size:10px;font-weight:700;letter-spacing:.8px;
+  text-transform:uppercase;color:var(--ink4);
+  margin-bottom:8px;display:block;
+}
 
-  #hero::before {
-    content: '';
-    position: absolute;
-    top: -120px; right: -180px;
-    width: 700px; height: 700px;
-    background: radial-gradient(ellipse, rgba(99,88,200,0.12) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
-  #hero::after {
-    content: '';
-    position: absolute;
-    bottom: -60px; left: -100px;
-    width: 400px; height: 400px;
-    background: radial-gradient(ellipse, rgba(240,90,40,0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
+/* ── BADGE / PILL ── */
+.badge{
+  display:inline-flex;align-items:center;
+  border-radius:100px;padding:3px 10px;
+  font-size:11px;font-weight:600;
+}
+.badge-purple{background:var(--purple-pale);color:var(--purple-d)}
+.badge-teal{background:var(--teal-pale);color:var(--teal-d)}
+.badge-orange{background:var(--orange-pale);color:var(--orange-d)}
+.badge-amber{background:var(--amber-pale);color:#7A5200}
+.badge-red{background:var(--red-pale);color:var(--red)}
+.badge-green{background:var(--green-pale);color:var(--green)}
+.badge-dark{background:var(--ink);color:#fff}
 
-  .hero-left { position: relative; z-index: 2; }
+/* ── CHECK LIST ── */
+.checklist{list-style:none;display:flex;flex-direction:column;gap:7px}
+.checklist li{
+  display:flex;align-items:flex-start;gap:9px;
+  font-size:14px;line-height:1.55;
+}
+.ci{
+  width:18px;height:18px;border-radius:50%;
+  border:1.5px solid var(--teal);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.ci svg{width:10px;height:10px}
+.ci-x{border-color:var(--red)}
+.ci-x svg path{stroke:var(--red)}
+.ci-amber{border-color:var(--amber)}
+.ci-purple{border-color:var(--purple)}
 
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(64,53,160,0.08);
-    border: 1px solid rgba(64,53,160,0.18);
-    border-radius: 100px;
-    padding: 6px 14px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--purple);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-  }
-  .hero-badge-dot {
-    width: 7px; height: 7px;
-    background: var(--orange);
-    border-radius: 50%;
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.7); }
-  }
+/* ── NUMBERED LIST ── */
+.numlist{list-style:none;display:flex;flex-direction:column;gap:8px}
+.numlist li{display:flex;align-items:flex-start;gap:10px;font-size:14px}
+.num-dot{
+  width:22px;height:22px;border-radius:6px;
+  background:var(--purple-pale);color:var(--purple);
+  font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.num-dot.teal{background:var(--teal-pale);color:var(--teal-d)}
+.num-dot.orange{background:var(--orange-pale);color:var(--orange-d)}
 
-  .hero-h1 {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2.4rem, 4.5vw, 3.6rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    color: var(--ink);
-    margin-bottom: 20px;
-  }
-  .hero-h1 em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--orange);
-  }
+/* ── HIGHLIGHT BOX ── */
+.highlight{
+  border-radius:var(--r2);
+  padding:14px 16px;
+  font-size:13.5px;line-height:1.6;
+}
+.h-purple{background:var(--purple-pale);border-left:4px solid var(--purple)}
+.h-teal{background:var(--teal-pale);border-left:4px solid var(--teal)}
+.h-orange{background:var(--orange-pale);border-left:4px solid var(--orange)}
+.h-amber{background:var(--amber-pale);border-left:4px solid var(--amber)}
+.h-red{background:var(--red-pale);border-left:4px solid var(--red)}
+.h-green{background:var(--green-pale);border-left:4px solid var(--green)}
+.highlight strong{display:block;font-weight:600;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;opacity:.75}
 
-  .hero-sub {
-    font-size: 1.05rem;
-    font-weight: 400;
-    color: var(--muted);
-    line-height: 1.7;
-    margin-bottom: 36px;
-    max-width: 460px;
-  }
+/* ── SCRIPT BOX ── */
+.script-box{
+  background:#F8F5FF;
+  border-left:3px solid var(--purple);
+  border-radius:0 10px 10px 0;
+  padding:12px 16px;
+  font-size:13px;
+  color:var(--ink2);
+  font-style:italic;
+  line-height:1.7;
+  margin:8px 0;
+}
+.script-box strong{font-style:normal;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--purple);display:block;margin-bottom:4px}
 
-  .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
+/* ── WARN BOX ── */
+.warn{
+  background:var(--red-pale);
+  border-radius:var(--r2);
+  padding:12px 14px;
+  font-size:13px;color:var(--red);
+  display:flex;gap:8px;align-items:flex-start;
+}
+.warn::before{content:'⚠️';flex-shrink:0;font-style:normal}
 
-  .hero-urgency {
-    margin-top: 28px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.78rem;
-    color: var(--muted);
-  }
-  .urgency-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; }
+/* ── INFO BOX ── */
+.info{
+  background:var(--purple-pale);
+  border-radius:var(--r2);
+  padding:12px 14px;
+  font-size:13px;color:var(--purple-d);
+  display:flex;gap:8px;align-items:flex-start;
+}
+.info::before{content:'💡';flex-shrink:0}
 
-  .hero-right {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
+/* ── TAG ROW ── */
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.tag{
+  border-radius:100px;padding:4px 12px;
+  font-size:11.5px;font-weight:500;
+}
+.tag-p{background:var(--purple-pale);color:var(--purple-d)}
+.tag-t{background:var(--teal-pale);color:var(--teal-d)}
+.tag-o{background:var(--orange-pale);color:var(--orange-d)}
+.tag-a{background:var(--amber-pale);color:#7A5200}
 
-  .hero-card {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 18px 20px;
-    border: 1px solid var(--border);
-    box-shadow: 0 2px 16px rgba(27,21,64,0.06);
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    transition: transform 0.2s ease;
-  }
-  .hero-card:hover { transform: translateX(4px); }
-  .hero-card:nth-child(2) { margin-left: 0; }
-  .hero-card:nth-child(3) { margin-left: 0; }
+/* ── PIPELINE STAGES ── */
+.pipeline{
+  display:flex;flex-direction:column;gap:0;
+}
+.pipe-item{
+  display:flex;align-items:flex-start;gap:0;
+}
+.pipe-left{
+  display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0;
+}
+.pipe-dot{
+  width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;
+  flex-shrink:0;
+  z-index:1;position:relative;
+}
+.pipe-line{width:2px;background:var(--border);flex:1;min-height:16px}
+.pipe-content{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--r2);padding:12px 14px;
+  margin:0 0 8px 12px;flex:1;
+}
+.pipe-content:hover{border-color:var(--purple);box-shadow:0 2px 8px rgba(91,53,213,.1)}
+.pipe-name{font-weight:600;font-size:14px;margin-bottom:3px}
+.pipe-desc{font-size:12px;color:var(--ink3)}
 
-  .card-icon {
-    width: 46px; height: 46px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    flex-shrink: 0;
-  }
-  .icon-orange { background: rgba(240,90,40,0.1); }
-  .icon-purple { background: rgba(64,53,160,0.1); }
-  .icon-green  { background: rgba(34,197,94,0.1); }
+/* ── DATA FORM ── */
+.data-form{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;
+}
+.data-field{
+  background:var(--bg2);border-radius:var(--r3);
+  padding:10px 12px;
+  display:flex;flex-direction:column;gap:2px;
+}
+.df-label{font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--purple);margin-bottom:2px}
+.df-value{font-size:12.5px;color:var(--ink3)}
+.data-field.required::after{
+  content:'Wajib';
+  font-size:9px;font-weight:600;
+  color:var(--orange);
+  text-transform:uppercase;
+  letter-spacing:.4px;
+}
 
-  .card-text strong {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 2px;
-  }
-  .card-text span {
-    font-size: 0.78rem;
-    color: var(--muted);
-  }
+/* ── CALENDLY ── */
+.calendly-link{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--purple);color:#fff;
+  border-radius:8px;padding:8px 16px;
+  font-size:13px;font-weight:600;
+  text-decoration:none;
+  transition:background .15s;
+  word-break:break-all;
+}
+.calendly-link:hover{background:var(--purple-d);text-decoration:none;color:#fff}
+.calendly-link-teal{background:var(--teal)}
+.calendly-link-teal:hover{background:var(--teal-d)}
 
-  /* ── SECTION COMMON ── */
-  section { padding: 88px 5%; }
-  .section-label {
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--orange);
-    margin-bottom: 10px;
-  }
-  .section-title {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.025em;
-    color: var(--ink);
-    margin-bottom: 12px;
-  }
-  .section-sub {
-    font-size: 1rem;
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 520px;
-  }
+/* ── KPI TABLE ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.kpi-box{
+  background:var(--purple-pale);border-radius:var(--r2);
+  padding:14px 16px;
+  text-align:center;
+}
+.kpi-num{font-family:'Sora',sans-serif;font-size:26px;font-weight:800;color:var(--purple-d)}
+.kpi-label{font-size:12px;color:var(--ink3);margin-top:2px}
 
-  /* ── WHY PARCELIN ── */
-  #why {
-    background: var(--ink);
-    color: white;
-    padding: 88px 5%;
-  }
-  #why .section-label { color: var(--orange-light); }
-  #why .section-title { color: white; }
-  #why .section-sub { color: rgba(255,255,255,0.55); }
+/* ── TWO COL ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
 
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 52px;
-  }
+/* ── STEP CARD ── */
+.step-card{
+  border-radius:var(--r2);padding:14px 16px;
+  border:1px solid var(--border);background:var(--white);
+  position:relative;
+}
+.step-num{
+  position:absolute;top:-10px;left:14px;
+  width:22px;height:22px;border-radius:6px;
+  background:var(--purple);color:#fff;
+  font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.step-title{font-weight:600;font-size:14px;margin-bottom:4px;margin-top:6px}
+.step-desc{font-size:12.5px;color:var(--ink3);line-height:1.55}
 
-  .why-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 20px;
-    padding: 32px 28px;
-    transition: background 0.2s;
-  }
-  .why-card:hover { background: rgba(255,255,255,0.09); }
+/* ── VALUE CARD ── */
+.value-card{
+  border-radius:var(--r2);padding:16px;
+  border:1px solid var(--border);
+  display:flex;align-items:flex-start;gap:12px;
+}
+.value-icon{
+  font-size:26px;flex-shrink:0;
+  width:46px;height:46px;border-radius:12px;
+  background:var(--purple-pale);
+  display:flex;align-items:center;justify-content:center;
+}
+.value-title{font-weight:600;font-size:14px;margin-bottom:3px}
+.value-desc{font-size:12.5px;color:var(--ink3);line-height:1.55}
+.value-script{
+  margin-top:8px;font-size:12px;color:var(--purple-d);
+  font-style:italic;
+  background:var(--purple-pale);border-radius:6px;
+  padding:6px 10px;line-height:1.5;
+}
 
-  .why-num {
-    font-family: 'Fraunces', serif;
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--orange);
-    opacity: 0.4;
-    line-height: 1;
-    margin-bottom: 16px;
-  }
-  .why-title {
-    font-family: 'Fraunces', serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 12px;
-    line-height: 1.3;
-  }
-  .why-desc {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.55);
-    line-height: 1.7;
-  }
+/* ── DIVIDER ── */
+.divider{border:none;border-top:1px solid var(--border);margin:20px 0}
 
-  .why-pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 14px;
-  }
-  .why-pill {
-    background: rgba(240,90,40,0.15);
-    border: 1px solid rgba(240,90,40,0.25);
-    color: var(--orange-light);
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 100px;
-  }
+/* ── NAV (floating) ── */
+.fab-toc{
+  position:fixed;bottom:28px;right:24px;
+  background:var(--purple);color:#fff;
+  border-radius:14px;
+  padding:10px 18px;
+  font-size:13px;font-weight:600;
+  box-shadow:0 4px 20px rgba(91,53,213,.35);
+  cursor:pointer;border:none;
+  transition:transform .15s,background .15s;
+  z-index:100;
+  display:flex;align-items:center;gap:6px;
+}
+.fab-toc:hover{transform:translateY(-2px);background:var(--purple-d)}
 
-  /* ── SERVICES ── */
-  #services { background: var(--cream); }
+/* ── RULE TABLE ── */
+.rule-table{width:100%;border-collapse:collapse;font-size:13px}
+.rule-table th{
+  background:var(--purple-pale);color:var(--purple-d);
+  font-weight:600;font-size:11px;letter-spacing:.4px;text-transform:uppercase;
+  padding:8px 12px;text-align:left;
+}
+.rule-table td{padding:9px 12px;border-bottom:1px solid var(--bg2);vertical-align:top}
+.rule-table tr:last-child td{border-bottom:none}
+.rule-table tr:hover td{background:var(--purple-pale2)}
 
-  .services-header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 48px;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
+/* ── KOMMO PIPELINE VISUAL ── */
+.kommo-flow{
+  display:flex;flex-wrap:nowrap;overflow-x:auto;
+  gap:0;padding-bottom:8px;
+  scrollbar-width:thin;
+}
+.kommo-stage{
+  flex-shrink:0;
+  display:flex;flex-direction:column;align-items:center;
+  gap:4px;
+}
+.k-box{
+  border-radius:10px;padding:10px 14px;
+  text-align:center;min-width:100px;
+  font-size:11.5px;font-weight:600;line-height:1.3;
+}
+.k-arrow{
+  display:flex;align-items:center;padding:0 2px;
+  color:var(--ink4);font-size:18px;
+  margin-top:20px;
+}
+.k-step{font-size:9px;color:var(--ink4);font-weight:500;letter-spacing:.3px;text-transform:uppercase}
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .cover{padding:32px 24px 40px}
+  .cover h1{font-size:26px}
+  .toc-grid{grid-template-columns:1fr}
+  .two-col,.three-col{grid-template-columns:1fr}
+  .data-form{grid-template-columns:1fr}
+  .page-wrap{padding:16px 12px 60px}
+  .toc-page{padding:24px 20px}
+}
 
-  .service-card {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 28px;
-    border: 1px solid var(--border);
-    box-shadow: 0 2px 16px rgba(27,21,64,0.05);
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    transition: all 0.25s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--orange);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s ease;
-  }
-  .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(27,21,64,0.1); }
-  .service-card:hover::before { transform: scaleX(1); }
+/* ── QUOTE RULE ── */
+.q-rule{
+  border-radius:var(--r2);padding:16px 18px;
+  background:linear-gradient(135deg,var(--purple-pale),var(--teal-pale));
+  border:1px solid var(--border);
+  font-size:15px;font-style:italic;line-height:1.6;
+  color:var(--ink2);
+  margin:20px 0;
+}
+.q-rule::before{content:'"';font-size:40px;line-height:.8;color:var(--purple);font-style:normal;display:block;margin-bottom:6px}
 
-  .service-emoji {
-    font-size: 2rem;
-    margin-bottom: 14px;
-    display: block;
-  }
-  .service-name {
-    font-family: 'Fraunces', serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
-  .service-desc {
-    font-size: 0.82rem;
-    color: var(--muted);
-    line-height: 1.65;
-    margin-bottom: 22px;
-    flex: 1;
-  }
-  .service-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 20px;
-  }
-  .service-tag {
-    background: var(--cream-dark);
-    color: var(--ink-mid);
-    font-size: 0.68rem;
-    font-weight: 600;
-    padding: 3px 9px;
-    border-radius: 100px;
-  }
+/* ── SECTION DIVIDER ── */
+.sec-div{
+  display:flex;align-items:center;gap:10px;
+  margin:32px 0 16px;
+}
+.sec-div-line{flex:1;height:1px;background:var(--border)}
+.sec-div-label{
+  font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--ink4);white-space:nowrap;
+}
 
-  .btn-ig {
-    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: white;
-    width: 100%;
-    justify-content: center;
-    padding: 11px 16px;
-    border-radius: 10px;
-    font-size: 0.82rem;
-  }
-  .btn-ig:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(220,39,67,0.35); }
-
-  /* ── BRANDS ── */
-  #brands {
-    background: var(--cream-dark);
-    padding: 60px 5%;
-    text-align: center;
-  }
-  .brands-label {
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 32px;
-  }
-  .brands-grid {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-  }
-  .brand-item {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    width: 130px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 14px;
-    transition: all 0.2s;
-    overflow: hidden;
-  }
-  .brand-item:hover { transform: scale(1.05); box-shadow: 0 4px 16px rgba(27,21,64,0.1); border-color: rgba(27,21,64,0.2); }
-  .brand-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.2s;
-  }
-  .brand-item:hover img { filter: grayscale(0%); opacity: 1; }
-  .brand-item .brand-name-fallback {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--ink-mid);
-    letter-spacing: 0.01em;
-    text-align: center;
-    line-height: 1.3;
-  }
-
-  /* ── PROCESS ── */
-  #process { background: var(--white); }
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0;
-    margin-top: 52px;
-    position: relative;
-  }
-  .process-steps::before {
-    content: '';
-    position: absolute;
-    top: 28px; left: 10%; right: 10%;
-    height: 1px;
-    background: var(--border);
-  }
-  .process-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 12px;
-    position: relative;
-  }
-  .step-circle {
-    width: 56px; height: 56px;
-    border-radius: 50%;
-    background: var(--cream);
-    border: 2px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    margin-bottom: 16px;
-    position: relative;
-    z-index: 1;
-    transition: all 0.2s;
-  }
-  .process-step:hover .step-circle {
-    background: var(--orange);
-    border-color: var(--orange);
-  }
-  .step-label {
-    font-family: 'Fraunces', serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 6px;
-  }
-  .step-desc {
-    font-size: 0.72rem;
-    color: var(--muted);
-    line-height: 1.5;
-  }
-
-  /* ── DISCOVERY / CTA SECTION ── */
-  #discovery {
-    background: linear-gradient(135deg, #1B1540 0%, #2E2760 100%);
-    color: white;
-    padding: 88px 5%;
-    position: relative;
-    overflow: hidden;
-  }
-  #discovery::before {
-    content: '';
-    position: absolute;
-    top: -100px; right: -150px;
-    width: 500px; height: 500px;
-    background: radial-gradient(ellipse, rgba(240,90,40,0.15) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  #discovery::after {
-    content: '';
-    position: absolute;
-    bottom: -80px; left: -80px;
-    width: 350px; height: 350px;
-    background: radial-gradient(ellipse, rgba(99,88,200,0.2) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-
-  .discovery-inner {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-
-  .discovery-checklist {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 28px 0;
-  }
-  .check-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.92rem;
-    color: rgba(255,255,255,0.8);
-  }
-  .check-box {
-    width: 22px; height: 22px;
-    border-radius: 6px;
-    background: var(--orange);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 0.7rem;
-    color: white;
-  }
-
-  .discovery-right {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 24px;
-    padding: 36px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-  }
-  .discovery-right h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-  .discovery-right p {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.55);
-    line-height: 1.7;
-    margin-bottom: 28px;
-  }
-  .meeting-perks {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 28px;
-  }
-  .perk {
-    background: rgba(255,255,255,0.06);
-    border-radius: 12px;
-    padding: 10px 12px;
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.7);
-    text-align: left;
-  }
-  .perk strong { display: block; color: white; font-size: 0.82rem; margin-bottom: 2px; }
-
-  /* ── KATALOG BANNER ── */
-  #katalog {
-    background: var(--orange);
-    padding: 56px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-  .katalog-text h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 6px;
-    line-height: 1.2;
-  }
-  .katalog-text p {
-    font-size: 0.92rem;
-    color: rgba(255,255,255,0.8);
-  }
-  .btn-katalog {
-    background: white;
-    color: var(--orange);
-    padding: 14px 32px;
-    border-radius: 100px;
-    font-weight: 700;
-    font-size: 0.92rem;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
-    transition: all 0.2s;
-    flex-shrink: 0;
-  }
-  .btn-katalog:hover { background: var(--ink); color: white; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,21,64,0.3); }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--ink);
-    color: rgba(255,255,255,0.5);
-    padding: 48px 5% 32px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-  .footer-logo {
-    font-family: 'Fraunces', serif;
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 8px;
-  }
-  .footer-logo span { color: var(--orange); }
-  .footer-tagline { font-size: 0.82rem; line-height: 1.6; }
-  .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    justify-content: flex-end;
-  }
-  .footer-links a {
-    color: rgba(255,255,255,0.45);
-    text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.2s;
-  }
-  .footer-links a:hover { color: white; }
-  .footer-bottom {
-    grid-column: 1/-1;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    padding-top: 20px;
-    font-size: 0.75rem;
-    text-align: center;
-  }
-
-  /* ── FLOATING WA ── */
-  .wa-float {
-    position: fixed;
-    bottom: 28px; right: 28px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-  }
-  .wa-bubble {
-    background: var(--ink);
-    color: white;
-    font-size: 0.78rem;
-    padding: 8px 14px;
-    border-radius: 12px 12px 2px 12px;
-    opacity: 0;
-    transform: translateY(6px) scale(0.95);
-    transition: all 0.25s ease;
-    white-space: nowrap;
-    pointer-events: none;
-  }
-  .wa-float:hover .wa-bubble {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  .wa-btn {
-    width: 56px; height: 56px;
-    border-radius: 50%;
-    background: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-    text-decoration: none;
-    transition: all 0.2s;
-    animation: wa-pop 3s ease-in-out infinite;
-  }
-  .wa-btn:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
-  @keyframes wa-pop {
-    0%, 90%, 100% { transform: scale(1); }
-    95% { transform: scale(1.08); }
-  }
-  .wa-btn svg { width: 28px; height: 28px; fill: white; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    #hero { grid-template-columns: 1fr; padding: 100px 5% 60px; }
-    .hero-right { display: none; }
-    .why-grid { grid-template-columns: 1fr; }
-    .services-grid { grid-template-columns: 1fr 1fr; }
-    .process-steps { grid-template-columns: 1fr 1fr; gap: 24px; }
-    .process-steps::before { display: none; }
-    .discovery-inner { grid-template-columns: 1fr; }
-    footer { grid-template-columns: 1fr; }
-    .footer-links { justify-content: flex-start; }
-  }
-  @media (max-width: 580px) {
-    nav { padding: 0 4%; }
-    .nav-cta .btn-outline { display: none; }
-    section { padding: 64px 4%; }
-    .services-grid { grid-template-columns: 1fr; }
-    .services-header { flex-direction: column; align-items: flex-start; }
-    #katalog { flex-direction: column; }
-    .meeting-perks { grid-template-columns: 1fr; }
-  }
+/* ── NEW BADGE ── */
+.new-badge{
+  display:inline-flex;align-items:center;
+  background:var(--orange);color:#fff;
+  border-radius:100px;padding:1px 7px;
+  font-size:10px;font-weight:700;
+  margin-left:6px;
+  vertical-align:middle;
+}
 </style>
 </head>
 <body>
+<div class="page-wrap">
 
-<!-- ══ NAVBAR ══ -->
-<nav>
-  <a href="#" class="nav-logo">Parcelin<span>.</span></a>
-  <div class="nav-cta">
-        <a href="https://wa.me/62819812020?text=Halo,%2C%20saya%20mau%20konsultasikan%20kebutuhan%20saya%20dulu%20di%20Parcelin" target="_blank" class="btn btn-primary">Mulai Konsultasi →</a>
+<!-- ══════════════════════════════════
+     COVER
+══════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-badge">📦 ParcelinPack Official</div>
+  <h1>Buku Panduan<br/><span>SOP Sales Digital</span></h1>
+  <p class="cover-sub">Panduan Operasional Standar — Customer Service & Digital Sales Officer</p>
+  <div class="cover-meta">
+    <span class="cover-tag">✦ Edisi Revisi 2025</span>
+    <span class="cover-tag">✦ Mencakup Kommo CRM Admin</span>
+    <span class="cover-tag">✦ Alur Pipeline Lengkap</span>
+    <span class="cover-tag">✦ B2B Sales Digital</span>
   </div>
-</nav>
+  <p class="cover-edition">Disusun oleh: Tim Manajemen ParcelinPack &nbsp;·&nbsp; Versi 2.0 — Mei 2025</p>
+</div>
 
-<!-- ══ HERO ══ -->
-<section id="hero">
-  <div class="hero-left">
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      Worry-Free Partner
+<!-- ══════════════════════════════════
+     TABLE OF CONTENTS
+══════════════════════════════════ -->
+<div class="toc-page" id="toc">
+  <div class="toc-title">📋 Daftar Isi</div>
+  <div class="toc-grid">
+    <a class="toc-item" href="#s1"><div class="toc-num">1</div><span class="toc-label">Pendahuluan & Tujuan</span></a>
+    <a class="toc-item" href="#s2"><div class="toc-num">2</div><span class="toc-label">Value — Worry-Free Partner</span></a>
+    <a class="toc-item" href="#s3"><div class="toc-num">3</div><span class="toc-label">Prinsip Layanan (Konsultatif, Teliti, Effort, Peduli)</span></a>
+    <a class="toc-item" href="#s4"><div class="toc-num">4</div><span class="toc-label">Etika & Gaya Bahasa CS</span></a>
+    <a class="toc-item" href="#s5"><div class="toc-num" style="background:#EE8A4A;color:#fff">5</div><span class="toc-label">Alur Kerja CS Harian</span></a>
+    <a class="toc-item" href="#s6"><div class="toc-num" style="background:#5B35D5;color:#fff">6</div><span class="toc-label">⭐ SOP Kommo CRM & Admin Pipeline</span></a>
+    <a class="toc-item" href="#s7"><div class="toc-num">7</div><span class="toc-label">SOP Lead Masuk & Percakapan WA</span></a>
+    <a class="toc-item" href="#s8"><div class="toc-num">8</div><span class="toc-label">Strategi Komunikasi Penjualan</span></a>
+    <a class="toc-item" href="#s9"><div class="toc-num">9</div><span class="toc-label">Daftar Q&A Customer</span></a>
+    <a class="toc-item" href="#s10"><div class="toc-num">10</div><span class="toc-label">Handling Komplain</span></a>
+    <a class="toc-item" href="#s11"><div class="toc-num">11</div><span class="toc-label">Follow-up Lead & Invoice</span></a>
+    <a class="toc-item" href="#s12"><div class="toc-num">12</div><span class="toc-label">Survey Kepuasan Pelanggan</span></a>
+    <a class="toc-item" href="#s13"><div class="toc-num">13</div><span class="toc-label">Repeat Order & Loyalitas</span></a>
+    <a class="toc-item" href="#s14"><div class="toc-num">14</div><span class="toc-label">KPI & Evaluasi</span></a>
+    <a class="toc-item" href="#s15"><div class="toc-num">15</div><span class="toc-label">Simulasi & Roleplay</span></a>
+    <a class="toc-item" href="#s16"><div class="toc-num">16</div><span class="toc-label">Bank Script Auto-text</span></a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     1. PENDAHULUAN
+══════════════════════════════════ -->
+<div id="s1">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#EDE8FF">📘</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">1. Pendahuluan & Tujuan</h2>
+      <p class="chapter-sub">Mengapa buku panduan ini ada dan untuk siapa</p>
     </div>
-    <h1 class="hero-h1">Packaging, Print &amp; Merch <em>tanpa ribet,</em> tepat waktu.</h1>
-    <p class="hero-sub">
-      Dari konsep hingga pengiriman — Parcelin hadir sebagai partner produksi kreatif untuk brand kamu. Konsultasi gratis, proses transparan, hasil sesuai ekspektasi.
+  </div>
+
+  <div class="section-card">
+    <p style="font-size:15px;line-height:1.8;color:var(--ink2)">
+      Buku panduan ini disusun sebagai <strong>referensi utama dan acuan kerja</strong> untuk seluruh Customer Service (CS) dan Tim Digital Sales Officer di Parcelinpack. Setiap langkah dalam dokumen ini dirancang agar tim bekerja dengan standar yang seragam, terukur, dan berorientasi pada pengalaman pelanggan terbaik.
     </p>
-    <div class="hero-actions">
-      <a href="https://calendly.com/mitaparcelin/30min" target="_blank" class="btn btn-primary btn-lg"> Jadwalkan Meeting</a>
-      <a href="https://wa.me/62819812020?text=Halo%2C%20saya%20mau%20minta%20katalog%20harga%20Parcelin" target="_blank" class="btn btn-wa btn-lg">📋 Cek Katalog</a>
-    </div>
-    <div class="hero-urgency">
-      <div class="urgency-dot"></div>
-      Tim Parcelin sedang online • Slot konsultasi tersedia
-    </div>
   </div>
 
-  <div class="hero-right">
-    <div class="hero-card">
-      <div class="card-icon icon-orange">🎨</div>
-      <div class="card-text">
-        <strong>Creative Consultation</strong>
-        <span>Dari brainstorming hingga material pilihan terbaik</span>
-      </div>
+  <div class="three-col">
+    <div class="section-card purple">
+      <div class="card-title">🎯 Standarisasi</div>
+      <p style="font-size:13px;color:var(--ink3)">Menyeragamkan komunikasi, alur penjualan, dan pengelolaan data di seluruh tim CS.</p>
     </div>
-    <div class="hero-card">
-      <div class="card-icon icon-purple">🔍</div>
-      <div class="card-text">
-        <strong>Transparent Process</strong>
-        <span>Progress update real-time + video QC sebelum kirim</span>
-      </div>
+    <div class="section-card teal">
+      <div class="card-title">📈 Optimasi</div>
+      <p style="font-size:13px;color:var(--ink3)">Mengoptimalkan potensi closing dari setiap leads yang masuk melalui berbagai saluran iklan.</p>
     </div>
-    <div class="hero-card">
-      <div class="card-icon icon-green">✅</div>
-      <div class="card-text">
-        <strong>Guaranteed Timeline</strong>
-        <span>Komitmen on-time delivery dengan QC berlapis</span>
-      </div>
+    <div class="section-card orange">
+      <div class="card-title">💎 Kualitas</div>
+      <p style="font-size:13px;color:var(--ink3)">Meningkatkan kualitas layanan pelanggan sehingga tercipta kepercayaan dan loyalitas jangka panjang.</p>
     </div>
   </div>
-</section>
-
-<!-- ══ WHY PARCELIN ══ -->
-<section id="why">
-  <div class="section-label">Kenapa Harus di Parcelin?</div>
-  <h2 class="section-title">Bukan sekadar vendor.<br>Partner produksi yang bikin kamu tenang.</h2>
-  <p class="section-sub">Kami paham pain point brand owner: takut molor, hasil nggak sesuai, vendor ghosting menjelang deadline. Makanya Parcelin hadir dengan 3 komitmen nyata.</p>
-
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-num">01</div>
-      <div class="why-title">Consultative Approach</div>
-      <p class="why-desc">Kami temani kamu dari nol — brainstorming konsep, pilih material yang tepat, sampai mockup siap. Kamu nggak perlu pusing sendiri cari referensi atau ngerti spesifikasi teknis.</p>
-      <div class="why-pill-row">
-        <span class="why-pill">Gratis Konsultasi</span>
-        <span class="why-pill">Rekomendasi Material</span>
-        <span class="why-pill">Mockup Preview</span>
-      </div>
-    </div>
-    <div class="why-card">
-      <div class="why-num">02</div>
-      <div class="why-title">Transparent Process</div>
-      <p class="why-desc">Progress selalu diupdate. Timeline jelas. Video QC dikirim sebelum produk berangkat. Kamu nggak perlu nunggu tanpa kabar — komunikasi terbuka dari awal hingga akhir.</p>
-      <div class="why-pill-row">
-        <span class="why-pill">Update Berkala</span>
-        <span class="why-pill">Video QC</span>
-        <span class="why-pill">Timeline Jelas</span>
-      </div>
-    </div>
-    <div class="why-card">
-      <div class="why-num">03</div>
-      <div class="why-title">Guaranteed Timeline &amp; Quality</div>
-      <p class="why-desc">Jadwal produksi dikunci, QC berlapis, hasil sesuai approved sample. On-time delivery bukan janji kosong — ini komitmen yang kami jaga di setiap order.</p>
-      <div class="why-pill-row">
-        <span class="why-pill">On-Time Delivery</span>
-        <span class="why-pill">QC Berlapis</span>
-        <span class="why-pill">Sesuai Sample</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ SERVICES ══ -->
-<section id="services">
-  <div class="services-header">
-    <div>
-      <div class="section-label">Layanan Kami</div>
-      <h2 class="section-title">Satu ekosistem,<br>semua kebutuhan brand-mu.</h2>
-    </div>
-    <p class="section-sub" style="margin:0">Dari packaging premium hingga atribut promosi — semua dikerjakan dengan standar kreativitas dan kualitas yang sama.</p>
-  </div>
-
-  <div class="services-grid">
-
-    <div class="service-card">
-      <span class="service-emoji">📦</span>
-      <div class="service-name">Parcelin Pack</div>
-      <p class="service-desc">Custom packaging berkualitas tinggi — hardbox, softbox, corrugated, gift box, dan lainnya. MOQ fleksibel mulai 10 pcs untuk kebutuhan premium.</p>
-      <div class="service-tags">
-        <span class="service-tag">Hardbox</span>
-        <span class="service-tag">Softbox</span>
-        <span class="service-tag">Corrugated Box</span>
-        <span class="service-tag">Gift Box</span>
-        <span class="service-tag">MOQ 10 pcs</span>
-      </div>
-      <a href="https://www.instagram.com/parcelinpack" target="_blank" class="btn btn-ig">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        @parcelinpack
-      </a>
-    </div>
-
-    <div class="service-card">
-      <span class="service-emoji">👜</span>
-      <div class="service-name">Parcelin Bag</div>
-      <p class="service-desc">Custom bag & pouch branded — untuk retail, F&B, fashion, dan lifestyle brand. Tampil stylish, fungsional, dan berkesan di tangan customer.</p>
-      <div class="service-tags">
-        <span class="service-tag">Pouch</span>
-        <span class="service-tag">Tote Bag</span>
-        <span class="service-tag">Tas Spunbond</span>
-        <span class="service-tag">MOQ 100 pcs</span>
-      </div>
-      <a href="https://www.instagram.com/parcelinbag" target="_blank" class="btn btn-ig">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        @parcelinbag
-      </a>
-    </div>
-
-    <div class="service-card">
-      <span class="service-emoji">🎁</span>
-      <div class="service-name">Parcelin Gift</div>
-      <p class="service-desc">Merchandise & souvenir branded yang memorable — untuk kampanye, event perusahaan, dan gift-giving yang meninggalkan kesan. MOQ mulai kecil.</p>
-      <div class="service-tags">
-        <span class="service-tag">Corporate Gift</span>
-        <span class="service-tag">Event Merch</span>
-        <span class="service-tag">Souvenir</span>
-      </div>
-      <a href="https://www.instagram.com/parcelingift" target="_blank" class="btn btn-ig">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        @parcelingift
-      </a>
-    </div>
-
-    <div class="service-card">
-      <span class="service-emoji">🖨️</span>
-      <div class="service-name">Parcelin Print</div>
-      <p class="service-desc">Solusi printing untuk semua kebutuhan brand — dari kartu nama, stiker, label produk, hingga materi marketing berkualitas offset & digital.</p>
-      <div class="service-tags">
-        <span class="service-tag">Stiker</span>
-        <span class="service-tag">Label</span>
-        <span class="service-tag">Kartu Nama</span>
-        <span class="service-tag">Offset</span>
-      </div>
-      <a href="https://www.instagram.com/parcelinprint" target="_blank" class="btn btn-ig">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        @parcelinprint
-      </a>
-    </div>
-
-    <div class="service-card">
-      <span class="service-emoji">👕</span>
-      <div class="service-name">Parcelin Wear</div>
-      <p class="service-desc">Custom apparel & fashion branded — kaos, jaket, seragam, hingga aksesoris fashion untuk brand-mu yang ingin tampil konsisten di setiap touchpoint.</p>
-      <div class="service-tags">
-        <span class="service-tag">Kaos Custom</span>
-        <span class="service-tag">Jaket</span>
-        <span class="service-tag">Seragam</span>
-      </div>
-      <a href="https://www.instagram.com/parcelinwear" target="_blank" class="btn btn-ig">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        @parcelinwear
-      </a>
-    </div>
-
-    <div class="service-card">
-      <span class="service-emoji">📢</span>
-      <div class="service-name">Parcelin Promotion</div>
-      <p class="service-desc">Material promosi & brand activation — banner, display, POP material, dan atribut kampanye yang bikin brand-mu standout di setiap momen promosi.</p>
-      <div class="service-tags">
-        <span class="service-tag">Banner</span>
-        <span class="service-tag">POP Material</span>
-        <span class="service-tag">Brand Activation</span>
-      </div>
-      <a href="https://www.instagram.com/parcelinpromotion" target="_blank" class="btn btn-ig">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        @parcelinpromotion
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══ BRANDS ══ -->
-<section id="brands">
-  <div class="brands-label">Dipercaya oleh brand-brand terkemuka Indonesia</div>
-  <div class="brands-grid">
-
-    <!-- Ganti src="..." dengan path logo masing-masing brand -->
-    <!-- Contoh: src="logos/wardah.png" -->
-    <!-- Kalau belum ada logo, nama brand akan tampil sebagai teks -->
-
-    <div class="brand-item">
-       <img src="logos/Wardah.png" alt="Wardah"> 
-    </div>
-    <div class="brand-item">
-      <img src="logos/Kahf.png" alt="Kahf">
-    </div>
-    <div class="brand-item">
-      <img src="logos/BCA.png" alt="BCA">
-    </div>
-    <div class="brand-item">
-      <img src="logos/OMG.png" alt="OMG">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Whitelab.png" alt="Whitelab">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Bunga Tanjung.png" alt="Bunga Tanjung">
-    </div>
-    <div class="brand-item">
-      <img src="logos/ESQA.png" alt="ESQA">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Glowies.png" alt="Glowies">
-    </div>
-    <div class="brand-item">
-        <img src="logos/Casenextdoor.png" alt="Casenextdoor">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Emina.png" alt="Emina">
-    </div>
-    <div class="brand-item">
-      <img src="logos/MOP Beauty.png" alt="MOP Beauty">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Gmedia.png" alt="Gmedia">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Facetology.png" alt="Facetology">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Close Up.png" alt="Close Up">
-    </div>
-    <div class="brand-item">
-      <img src="logos/IRIS.png" alt="IRIS">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Time International.png" alt="Time International">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Paragon.png" alt="Paragon">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Klamby.png" alt="Klamby">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Formula.png" alt="Formula">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Kotagede.png" alt="Kotagede">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Lapisa.png" alt="Lapisa">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Lozy.png" alt="Lozy">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Namas.png" alt="Namas">
-    </div>
-    <div class="brand-item">
-      <img src="logos/OT.png" alt="OT">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Prochiz.png" alt="Prochiz">
-    </div>
-    <div class="brand-item">
-      <img src="logos/Turris.png" alt="Turris">
-    </div>
-  <div class="brand-item">
-      <img src="logos/Dapoer Jude.png" alt="Dapoer Jude">
-    </div>
-  <div class="brand-item">
-      <img src="logos/Cotton Spring.png" alt="Cotton Spring">
-    </div>
-  <div class="brand-item">
-      <img src="logos/Goto.png" alt="Goto">
-    </div>
-  <div class="brand-item">
-      <img src="logos/Mondelez.png" alt="Mondelez">
-    </div>
-  <div class="brand-item">
-      <img src="logos/Good Day.png" alt="Good Day">
-    </div>
-
-  </div>
-</section>
-
-<!-- ══ HOW IT WORKS ══ -->
-<section id="process">
-  <div style="text-align:center; margin-bottom: 0">
-    <div class="section-label" style="text-align:center">Cara Kerja Parcelin</div>
-    <h2 class="section-title" style="text-align:center">5 tahap yang bikin proses produksimu <em style="font-style:italic; color:var(--orange)">tanpa drama.</em></h2>
-  </div>
-  <div class="process-steps">
-    <div class="process-step">
-      <div class="step-circle">🔍</div>
-      <div class="step-label">Discovery</div>
-      <p class="step-desc">Gali kebutuhan, brief & budget → quotation → invoice → DP 30%</p>
-    </div>
-    <div class="process-step">
-      <div class="step-circle">🎨</div>
-      <div class="step-label">Desain & Sample</div>
-      <p class="step-desc">Preview desain → revisi → approval desain → approval sample</p>
-    </div>
-    <div class="process-step">
-      <div class="step-circle">🤝</div>
-      <div class="step-label">Technical Meeting</div>
-      <p class="step-desc">Briefing teknis bersama PM → MOU → tambahan DP 40%</p>
-    </div>
-    <div class="process-step">
-      <div class="step-circle">🏭</div>
-      <div class="step-label">Produksi Massal</div>
-      <p class="step-desc">Produksi berjalan dengan progress update berkala ke kamu</p>
-    </div>
-    <div class="process-step">
-      <div class="step-circle">📦</div>
-      <div class="step-label">QC & Kirim</div>
-      <p class="step-desc">Video QC dikirim → pelunasan → pengiriman ke lokasi kamu</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══ DISCOVERY MEETING ══ -->
-<section id="discovery">
-  <div class="discovery-inner">
-    <div>
-      <div class="section-label" style="color: rgba(255,255,255,0.5); margin-bottom:18px">Udah Fix? Langsung Gas.</div>
-
-      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
-        <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18); border-radius:100px; padding:8px 16px; font-size:0.88rem; font-weight:600; color:white; white-space:nowrap;">✓ Ide</span>
-        <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18); border-radius:100px; padding:8px 16px; font-size:0.88rem; font-weight:600; color:white; white-space:nowrap;">✓ Budget</span>
-        <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18); border-radius:100px; padding:8px 16px; font-size:0.88rem; font-weight:600; color:white; white-space:nowrap;">✓ Desain</span>
-        <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18); border-radius:100px; padding:8px 16px; font-size:0.88rem; font-weight:600; color:white; white-space:nowrap;">✓ Quantity</span>
-        <span style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18); border-radius:100px; padding:8px 16px; font-size:0.88rem; font-weight:600; color:white; white-space:nowrap;">✓ Timeline</span>
-      </div>
-
-      <h2 class="section-title" style="color:white; font-size: clamp(1.6rem, 2.8vw, 2.4rem); margin-bottom:12px; line-height:1.2;">Tinggal satu yang belum —<br><em style="font-style:italic; color:var(--orange-light)">kepastian harga dari kami.</em></h2>
-
-      <p style="font-size:0.92rem; color:rgba(255,255,255,0.5); line-height:1.75; margin-bottom:28px; max-width:400px;">
-        Kalau semua sudah fix, nggak perlu panjang lebar. Cukup 30 menit ngobrol sama tim kami — langsung dapat estimasi harga yang akurat sesuai spec-mu.
-      </p>
-
-      <div class="discovery-checklist">
-        <div class="check-item"><div class="check-box">✓</div>Konsultasi langsung dengan tim kreatif Parcelin</div>
-        <div class="check-item"><div class="check-box">✓</div>Estimasi harga real berdasarkan kebutuhanmu</div>
-        <div class="check-item"><div class="check-box">✓</div>Durasi cukup 30 menit — efisien, no-nonsense</div>
-        <div class="check-item"><div class="check-box">✓</div>Gratis, tanpa komitmen, tanpa tekanan</div>
-      </div>
-    </div>
-
-    <div class="discovery-right">
-      <div style="font-size:2.2rem; margin-bottom:10px">🗓</div>
-      <h3>Jadwalkan Meeting — 30 Menit</h3>
-      <p>Jadwalkan langsung dengan tim Parcelin. Pilih waktu yang paling cocok buatmu.</p>
-      <div class="meeting-perks">
-        <div class="perk"><strong>⚡ Cepat</strong>Harga dalam 30 menit</div>
-        <div class="perk"><strong>🎯 Akurat</strong>Sesuai spec-mu</div>
-        <div class="perk"><strong>🆓 Gratis</strong>Tanpa biaya apapun</div>
-        <div class="perk"><strong>🤝 Santai</strong>No pressure, no hard sell</div>
-      </div>
-      <a href="https://calendly.com/mitaparcelin/30min" target="_blank" class="btn btn-primary btn-lg" style="width:100%; justify-content:center; border-radius:12px; font-size:1rem">
-        Yuk, Jadwalkan Meeting →
-      </a>
-      <p style="margin-top:12px; font-size:0.72rem; color:rgba(255,255,255,0.35)">Via Calendly · Pilih jadwal yang cocok</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══ KATALOG BANNER ══ -->
-<div id="katalog">
-  <div class="katalog-text">
-    <h3>Belum tahu mau mulai dari mana? Konsultasikan bersama Kami.</h3>
-    <p>Cek referensi produk, material, dan harga estimasi langsung via WhatsApp.</p>
-  </div>
-  <a href="https://wa.me/62819812020?text=Halo%20Parcelin%2C%20saya%20mau%20minta%20katalog%20harga" target="_blank" class="btn-katalog">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    Konsultasi Sekarang
-  </a>
 </div>
 
-<!-- ══ FOOTER ══ -->
-<footer>
-  <div>
-    <div class="footer-logo">Parcelin<span>.</span></div>
-    <p class="footer-tagline">PT Parcelin Creative Indonesia<br>Worry-Free Partner untuk produksi packaging, printing, merchandise & brand materials.</p>
+<!-- ══════════════════════════════════
+     2. VALUE PARCELINPACK
+══════════════════════════════════ -->
+<div id="s2">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#5B35D5;color:#fff">🤝</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">2. Value Parcelinpack — Worry-Free Partner</h2>
+      <p class="chapter-sub">Positioning utama yang harus selalu disampaikan ke setiap leads sejak kontak pertama</p>
+    </div>
   </div>
-  <div class="footer-links">
-    <a href="https://www.instagram.com/parcelinpack" target="_blank">Pack</a>
-    <a href="https://www.instagram.com/parcelinbag" target="_blank">Bag</a>
-    <a href="https://www.instagram.com/parcelingift" target="_blank">Gift</a>
-    <a href="https://www.instagram.com/parcelinprint" target="_blank">Print</a>
-    <a href="https://www.instagram.com/parcelinwear" target="_blank">Wear</a>
-    <a href="https://www.instagram.com/parcelinpromotion" target="_blank">Promotion</a>
-    <a href="https://wa.me/62819812020" target="_blank">WhatsApp</a>
-  </div>
-  <div class="footer-bottom">© 2025 PT Parcelin Creative Indonesia · All rights reserved</div>
-</footer>
 
-<!-- ══ FLOATING WA ══ -->
-<div class="wa-float">
-  <div class="wa-bubble">Halo, ada yang bisa kami bantu? 👋</div>
-  <a href="https://wa.me/62819812020?text=Halo,%2C%20saya%20mau%20konsultasikan%20kebutuhan%20produksi%20saya%20dulu%20di%20Parcelin" target="_blank" class="wa-btn" title="Chat WhatsApp Parcelin">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
-  </a>
+  <div class="q-rule">Parcelinpack bukan sekadar vendor produksi. Kita adalah <strong>partner yang menemani brand dari konsep sampai delivery</strong> — dengan proses yang transparan, timeline yang pasti, dan quality yang terjamin. Inilah yang membedakan kita dari vendor biasa.</div>
+
+  <div class="section-card dark" style="margin-bottom:16px">
+    <div class="card-title">🎯 Core Positioning: Worry-Free Partner</div>
+    <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7">Setiap CS wajib menanamkan positioning ini sejak kontak pertama. Customer tidak perlu khawatir tentang proses karena <strong style="color:#7FFFD4">semuanya didampingi oleh Parcelinpack.</strong> Dari memilih material, proses desain, sampling, produksi, hingga pengiriman — kita ada di setiap langkah.</p>
+    <div class="script-box" style="margin-top:12px;background:rgba(255,255,255,.08);border-left-color:#7FFFD4">
+      <strong style="color:#7FFFD4">Script Wajib Sampaikan ke Leads</strong>
+      "Kak, Parcelinpack bukan sekadar tempat cetak packaging. Kita adalah partner yang menemani kakak dari awal sampai produk di tangan — desain, material, sample, produksi, semua kita pantau bareng. Kakak tidak perlu khawatir soal prosesnya 😊"
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="value-card">
+      <div class="value-icon" style="background:#EDE8FF">🔍</div>
+      <div>
+        <div class="value-title">Proses Transparan</div>
+        <div class="value-desc">Customer selalu tahu sedang ada di tahap mana. Tidak ada yang disembunyikan — setiap update dikomunikasikan secara proaktif.</div>
+        <div class="value-script">"Kakak akan selalu aku update setiap ada perkembangan ya kak, tidak perlu nanya duluan 😊"</div>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon" style="background:#E0F7F4">⏰</div>
+      <div>
+        <div class="value-title">Timeline Pasti</div>
+        <div class="value-desc">Setiap order punya estimasi yang jelas. Kita berkomitmen pada timeline yang sudah disepakati dan aktif mengejar jika ada potensi molor.</div>
+        <div class="value-script">"Deadline kakak di [tanggal] ya? Aku pastikan timeline produksi kita aman dan aku monitor terus kak."</div>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon" style="background:#FFF0E8">✅</div>
+      <div>
+        <div class="value-title">Quality Terjamin</div>
+        <div class="value-desc">Ada proses QC di setiap tahap — dari sample sampai produksi massal. Customer bisa approve sebelum lanjut ke tahap berikutnya.</div>
+        <div class="value-script">"Sebelum produksi massal, kakak akan lihat sampel fisiknya dulu ya kak — baru kalau sudah acc, kita lanjut."</div>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon" style="background:#E6F9EE">🚀</div>
+      <div>
+        <div class="value-title">Full Partnership</div>
+        <div class="value-desc">Kita bantu dari brainstorming konsep, memilih material yang tepat, hingga saran finishing yang sesuai budget dan brand identity customer.</div>
+        <div class="value-script">"Belum punya referensi? Tenang kak, kita brainstorming bareng — aku bantu rekomendasikan yang paling cocok buat brand kakak ✨"</div>
+      </div>
+    </div>
+  </div>
 </div>
 
+<!-- ══════════════════════════════════
+     3. PRINSIP LAYANAN
+══════════════════════════════════ -->
+<div id="s3">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#EDE8FF">🌟</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">3. Prinsip Layanan Parcelinpack</h2>
+      <p class="chapter-sub">4 prinsip kerja yang harus dipegang setiap CS: Konsultatif · Teliti · Mengusahakan · Peduli</p>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="value-card">
+      <div class="value-icon" style="background:#EDE8FF">🗣️</div>
+      <div>
+        <div class="value-title">Konsultatif</div>
+        <div class="value-desc">CS bukan order-taker — CS adalah konsultan packaging. Aktif bertanya, menggali kebutuhan, dan memberikan rekomendasi terbaik, bukan sekadar menunggu instruksi customer.</div>
+        <div class="value-script">"Boleh cerita dulu kak produknya buat apa? Aku bantu rekomendasikan yang paling cocok 😊"</div>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon" style="background:#E0F7F4">🔎</div>
+      <div>
+        <div class="value-title">Teliti</div>
+        <div class="value-desc">Setiap detail order — spesifikasi, ukuran, qty, deadline, alamat pengiriman — dicatat dan dicek ulang. Kesalahan kecil bisa berujung complaint besar. CS wajib double-check sebelum diproses.</div>
+        <div class="value-script">"Aku konfirmasi ulang ya kak: ukuran [X], qty [Y], deadline [Z] — sudah benar kan kak? 😊"</div>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon" style="background:#FFF0E8">💪</div>
+      <div>
+        <div class="value-title">Mengusahakan (Effort)</div>
+        <div class="value-desc">Jangan cepat menyerah atau bilang "tidak bisa" tanpa benar-benar mencoba. CS wajib mengusahakan solusi terbaik — koordinasi dengan tim internal, tanya atasan, cari alternatif. Customer merasakan effort kita.</div>
+        <div class="value-script">"Aku coba carikan solusinya dulu ya kak, biar aku koordinasi sama tim dulu sebentar 🙏"</div>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon" style="background:#E6F9EE">❤️</div>
+      <div>
+        <div class="value-title">Peduli</div>
+        <div class="value-desc">CS peduli bukan hanya saat customer mau beli, tapi juga sesudahnya. Follow-up progress, proactive update, ingat nama dan kebutuhan customer — kepedulian yang tulus menciptakan loyalitas jangka panjang.</div>
+        <div class="value-script">"Halo Kak [nama], mau update progress pesanannya ya — kakak tidak perlu khawatir, aku pantau terus 😊"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     4. ETIKA & GAYA BAHASA
+══════════════════════════════════ -->
+<div id="s4">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#FFF0E8">💬</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">4. Etika & Gaya Bahasa CS</h2>
+      <p class="chapter-sub">Komunikasi yang baik bukan hanya tentang informasi, tapi bagaimana menyampaikannya</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">4.1 Gaya Bahasa Parcelinpack</div>
+    <div class="two-col" style="margin-top:4px">
+      <ul class="checklist">
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Bahasa Indonesia non-formal tapi sopan</li>
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ramah dan menyenangkan (tidak "robotik")</li>
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sebut nama CS sendiri saat perkenalan</li>
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Panggil nama customer: "Kak Putri" bukan hanya "Kak"</li>
+      </ul>
+      <ul class="checklist">
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pakai emoji setiap selesai menjawab pertanyaan</li>
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tutup jawaban dengan pertanyaan lanjutan</li>
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Berikan saran produk yang sesuai kebutuhan</li>
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Jangan gunakan singkatan atau bahasa tidak baku berlebihan</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card purple">
+    <div class="card-title">4.2 Contoh Chat Ideal</div>
+    <div class="script-box">
+      <strong>CS ke Customer</strong>
+      "Halo kak Lita, makasih udah WA Parcelinpack ya! Rani bantu hari ini 😊"<br/>
+      "Boleh tahu bisnisnya di bidang apa kak? Rani bantu rekomendasikan packaging yang cocok banget buat branding kakak ✨"
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">4.3 Nada Saat Komplain / Emosi Customer</div>
+    <div class="highlight h-amber"><strong>Prinsip Handling Emosi</strong>Gunakan nada sabar dan empati tinggi. Hindari pembelaan diri saat customer marah. Validasi perasaan mereka terlebih dahulu sebelum memberikan solusi.</div>
+    <div class="script-box">
+      <strong>Contoh respon komplain</strong>
+      "Mohon maaf banget ya kak 🙏 Aku turut sedih denger barangnya nggak sesuai harapan. Kakak boleh kirimkan foto/video produknya ya kak? Aku bantu teruskan ke tim produksi segera."
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">🚫 4.4 Larangan Gaya Bahasa</div>
+    <ul class="checklist">
+      <li><span class="ci ci-x"><svg viewBox="0 0 10 10"><path d="M3 3l4 4M7 3l-4 4" stroke="#E53E3E" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>Jangan pernah berkata "Cuma tanya doang ya?" — ini merendahkan customer</li>
+      <li><span class="ci ci-x"><svg viewBox="0 0 10 10"><path d="M3 3l4 4M7 3l-4 4" stroke="#E53E3E" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>Jangan spam customer yang tidak merespons — maksimal 3x follow-up</li>
+      <li><span class="ci ci-x"><svg viewBox="0 0 10 10"><path d="M3 3l4 4M7 3l-4 4" stroke="#E53E3E" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>Jangan memberikan diskon tanpa koordinasi dengan atasan (Muthia)</li>
+      <li><span class="ci ci-x"><svg viewBox="0 0 10 10"><path d="M3 3l4 4M7 3l-4 4" stroke="#E53E3E" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>Jangan merespons dengan jawaban copy-paste terasa kaku dan impersonal</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     5. ALUR KERJA CS HARIAN
+══════════════════════════════════ -->
+<div id="s5">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#FEF6E4">📅</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">5. Alur Kerja CS Harian</h2>
+      <p class="chapter-sub">Agar performa selalu optimal dan tidak ada lead terlewat</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">⏰ 5.1 Jam Kerja & Monitoring WA</div>
+    <div class="three-col" style="margin-top:8px">
+      <div class="kpi-box">
+        <div class="kpi-num">08.00</div>
+        <div class="kpi-label">Mulai jam aktif WIB</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-num">16.00</div>
+        <div class="kpi-label">Batas jam aktif WIB</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-num">10 min</div>
+        <div class="kpi-label">Maks. jeda cek WA</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card purple">
+    <div class="card-title">✅ 5.2 Checklist Harian CS</div>
+    <ul class="checklist">
+      <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cek semua inbox WA — pastikan tidak ada pesan tertinggal</li>
+      <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Buka Kommo — cek semua leads di setiap pipeline stage</li>
+      <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Update status leads yang sudah ada progress kemarin</li>
+      <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Follow-up leads yang belum direspons lebih dari 1 hari</li>
+      <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cek jadwal meeting hari ini (Discovery / Quotation / Technical)</li>
+      <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Update progress order yang sedang berjalan ke customer</li>
+      <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Catat semua aktivitas harian di Kommo sebelum jam 16.00</li>
+      <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><strong>Kirim daily report di grup WA tim</strong> — jumlah leads aktif, discovery meeting hari ini, leads yang masuk MQL, dan progress closing</li>
+    </ul>
+    <div class="highlight h-purple" style="margin-top:12px">
+      <strong>Format Reporting Harian di Grup WA</strong>
+      📊 Daily Report — [Nama CS] — [Tanggal]<br/>
+      ✅ Leads aktif hari ini: [X]<br/>
+      🤝 Discovery Meeting: [X] (selesai) / [X] (terjadwal)<br/>
+      📋 Leads masuk MQL: [X]<br/>
+      💰 Progress closing: [isi update singkat]<br/>
+      📝 Notes: [hal penting lainnya jika ada]
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     6. KOMMO CRM & PIPELINE ADMIN (NEW!)
+══════════════════════════════════ -->
+<div id="s6">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#5B35D5;color:#fff">⚙️</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">6. SOP Kommo CRM & Administrasi Pipeline <span class="new-badge">BARU</span></h2>
+      <p class="chapter-sub">Panduan lengkap pengelolaan leads di platform Kommo — wajib diikuti semua Digital Sales Officer</p>
+    </div>
+  </div>
+
+  <!-- 6.0 Overview Kommo -->
+  <div class="section-card dark">
+    <div class="card-title">🖥️ Apa itu Kommo?</div>
+    <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7">
+      <strong style="color:#fff">Kommo</strong> adalah platform CRM (Customer Relationship Management) yang digunakan Parcelinpack sebagai <strong style="color:#7FFFD4">pusat komunikasi dan manajemen leads</strong>. Semua Digital Sales Officer menggunakan Kommo sebagai perantara untuk membalas chat WhatsApp customer. <br/><br/>
+      Di dalam Kommo, terdapat <strong style="color:#7FFFD4">pipeline bertahap</strong> yang mencerminkan perjalanan setiap leads dari pertama masuk hingga closing — atau gagal.
+    </p>
+  </div>
+
+  <!-- PIPELINE FLOW -->
+  <div class="section-card">
+    <div class="card-title">🔄 Alur Pipeline di Kommo</div>
+    <p style="font-size:13px;color:var(--ink3);margin-bottom:14px">Setiap leads wajib ditempatkan di stage yang tepat sesuai progress aktualnya. Berikut urutan lengkap pipeline:</p>
+
+    <div class="pipeline">
+      <!-- 1 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#EDE8FF;color:#3D1FA8">1</div><div class="pipe-line"></div></div>
+        <div class="pipe-content"><div class="pipe-name">📥 Leads Masuk</div><div class="pipe-desc">Leads baru yang masuk dari iklan Meta Ads, Instagram DM, dll. Belum direspons oleh CS.</div></div>
+      </div>
+      <!-- 2 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#FFF0E8;color:#CC4E12">2</div><div class="pipe-line"></div></div>
+        <div class="pipe-content"><div class="pipe-name">👋 Kontak Awal</div><div class="pipe-desc">CS sudah mengirimkan greeting/sapaan pertama ke leads. Percakapan sudah dimulai.</div></div>
+      </div>
+      <!-- 3 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#E0F7F4;color:#007A69">3</div><div class="pipe-line"></div></div>
+        <div class="pipe-content"><div class="pipe-name">🤝 Discovery Meeting</div><div class="pipe-desc">Leads setuju untuk diajak Discovery Meeting — sesi penggalian kebutuhan secara lebih mendalam.</div></div>
+      </div>
+      <!-- 4 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#FEF6E4;color:#7A5200">4</div><div class="pipe-line"></div></div>
+        <div class="pipe-content"><div class="pipe-name">🧮 MQL Perlu Hitung Harga</div><div class="pipe-desc">Leads sudah qualified. Kebutuhan sudah jelas. Tim Hitung Harga perlu segera menghitung estimasi harga.</div></div>
+      </div>
+      <!-- 5 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#FEF6E4;color:#CC4E12">5</div><div class="pipe-line"></div></div>
+        <div class="pipe-content"><div class="pipe-name">📊 MQL Sudah Hitung</div><div class="pipe-desc">Tim Hitung Harga sudah selesai kalkulasi. CS perlu segera menyiapkan dokumen Quotation.</div></div>
+      </div>
+      <!-- 6 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#EDE8FF;color:#3D1FA8">6</div><div class="pipe-line"></div></div>
+        <div class="pipe-content"><div class="pipe-name">📋 Quotation Meeting</div><div class="pipe-desc">CS mempresentasikan quotation ke leads melalui meeting. Penawaran dijelaskan secara menyeluruh.</div></div>
+      </div>
+      <!-- 7 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#FFF0E8;color:#CC4E12">7</div><div class="pipe-line"></div></div>
+        <div class="pipe-content"><div class="pipe-name">⚖️ Negosiasi</div><div class="pipe-desc">Leads sedang dalam proses diskusi harga, spesifikasi, atau syarat lainnya sebelum deal.</div></div>
+      </div>
+      <!-- 8 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#E0F7F4;color:#007A69">8</div><div class="pipe-line"></div></div>
+        <div class="pipe-content"><div class="pipe-name">🧾 Invoice</div><div class="pipe-desc">Leads setuju. Invoice sudah dikirim ke customer. Menunggu pembayaran DP masuk.</div></div>
+      </div>
+      <!-- 9 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#E6F9EE;color:#27AE60">9</div><div class="pipe-line"></div></div>
+        <div class="pipe-content"><div class="pipe-name">✅ Penjualan Berhasil</div><div class="pipe-desc">Deal closing! DP masuk, proses produksi dimulai. CS lanjut memantau progress dan update customer.</div></div>
+      </div>
+      <!-- 10 -->
+      <div class="pipe-item">
+        <div class="pipe-left"><div class="pipe-dot" style="background:#FFF0F0;color:#E53E3E">✕</div></div>
+        <div class="pipe-content"><div class="pipe-name">❌ Penjualan Gagal</div><div class="pipe-desc">Leads tidak jadi order karena berbagai alasan. Catat alasan kegagalan untuk evaluasi tim.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6.1 GREETING + NAMING CONVENTION -->
+  <div class="sec-div"><div class="sec-div-line"></div><span class="sec-div-label">Poin 1 — Greeting & Naming</span><div class="sec-div-line"></div></div>
+
+  <div class="section-card" style="border:2px solid var(--purple)">
+    <div class="card-title">📝 6.1 Konvensi Penamaan & Tagging Leads</div>
+    <p style="font-size:14px;color:var(--ink2);margin-bottom:14px">Ketika CS melakukan <strong>greeting pertama</strong> (saat leads masuk ke stage <span class="badge badge-orange">Kontak Awal</span>), CS <strong>wajib</strong> melakukan tiga hal berikut di Kommo:</p>
+
+    <div class="highlight h-purple" style="margin-bottom:14px">
+      <strong>Format Nama Leads di Kommo</strong>
+      <span style="font-size:15px;font-weight:600;color:var(--purple-d)">CS (Nama CS) — (Nama Leads)</span><br/>
+      <span style="font-size:12px;color:var(--ink3)">Contoh: <em>CS Rani — Kak Putri Handayani</em> &nbsp;|&nbsp; <em>CS Dinda — PT Maju Bersama</em></span>
+    </div>
+
+    <div class="label-sm">Tags yang Wajib Diberikan (di Kommo)</div>
+    <div class="two-col">
+      <div>
+        <p style="font-size:12px;font-weight:600;color:var(--ink2);margin-bottom:6px">🏷️ Tag Nama CS</p>
+        <div class="tags">
+          <span class="tag tag-p">Rani</span>
+          <span class="tag tag-p">Dinda</span>
+          <span class="tag tag-p">Sarah</span>
+          <span class="tag tag-p">[Nama CS]</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:12px;font-weight:600;color:var(--ink2);margin-bottom:6px">🏢 Tag Unit Bisnis</p>
+        <div class="tags">
+          <span class="tag tag-t">Pack</span>
+          <span class="tag tag-t">Bag</span>
+          <span class="tag tag-t">Merch</span>
+        </div>
+      </div>
+      <div style="grid-column:1/-1">
+        <p style="font-size:12px;font-weight:600;color:var(--ink2);margin-bottom:6px">📦 Tag Jenis Produk</p>
+        <div class="tags">
+          <span class="tag tag-o">Hardbox</span>
+          <span class="tag tag-o">Softbox</span>
+          <span class="tag tag-o">Corrugated Box</span>
+          <span class="tag tag-o">Spunbond</span>
+          <span class="tag tag-o">Pouch</span>
+          <span class="tag tag-o">Paperbag</span>
+          <span class="tag tag-o">Tumbler</span>
+          <span class="tag tag-o">Sticker</span>
+          <span class="tag tag-o">Hangtag</span>
+          <span class="tag tag-o">[Produk lainnya]</span>
+        </div>
+      </div>
+    </div>
+    <div class="warn" style="margin-top:14px">Tags ini wajib diisi agar kita bisa menarik data berdasarkan industri atau jenis produk saat melakukan broadcast marketing ke database leads di masa mendatang.</div>
+  </div>
+
+  <!-- 6.2 PIPELINE MOVEMENT -->
+  <div class="sec-div"><div class="sec-div-line"></div><span class="sec-div-label">Poin 2 — Pengelolaan Pipeline</span><div class="sec-div-line"></div></div>
+
+  <div class="section-card teal">
+    <div class="card-title">🔃 6.2 Kewajiban Memindahkan Leads Antar Pipeline</div>
+    <p style="font-size:14px;margin-bottom:12px">CS <strong>wajib aktif dan teliti</strong> dalam menempatkan/memindahkan leads ke stage yang sesuai. Pipeline yang berantakan = data tidak akurat = tidak bisa dianalisa.</p>
+    <ul class="checklist">
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Segera pindahkan leads ke stage berikutnya setelah ada progress nyata</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Jangan biarkan leads "nganggur" di satu stage terlalu lama tanpa update</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cek dan update Kommo minimal 2x sehari: pagi (awal kerja) dan sore (sebelum tutup)</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Jika leads gagal di tengah jalan, pindahkan ke <span class="badge badge-red">Penjualan Gagal</span> dan catat alasannya</li>
+    </ul>
+  </div>
+
+  <!-- 6.3 DISCOVERY MEETING -->
+  <div class="sec-div"><div class="sec-div-line"></div><span class="sec-div-label">Poin 3 — Discovery Meeting</span><div class="sec-div-line"></div></div>
+
+  <div class="section-card">
+    <div class="card-title">🤝 6.3 SOP Discovery Meeting</div>
+    <p style="font-size:14px;color:var(--ink2);margin-bottom:14px">CS <strong>wajib menawarkan Discovery Meeting</strong> ke setiap leads. Tujuannya: menggali kebutuhan mendalam, membangun kepercayaan, dan memastikan kita dapat memberikan solusi yang tepat.</p>
+
+    <div class="highlight h-orange" style="margin-bottom:14px">
+      <strong>Aturan Minimal 2x Penolakan</strong>
+      CS harus terus mengajak leads ke Discovery Meeting sampai mendapat <strong>penolakan sebanyak 2 kali</strong> sebelum menyerah. Jangan langsung berhenti di penolakan pertama.
+    </div>
+
+    <div class="label-sm">2 Cara Mengatur Discovery Meeting</div>
+    <div class="two-col" style="margin-bottom:14px">
+      <div class="step-card">
+        <div class="step-num">A</div>
+        <div class="step-title">Customer Mengisi Sendiri</div>
+        <div class="step-desc">Kirimkan link Calendly ke customer dan minta mereka pilih jadwal yang cocok.</div>
+        <div style="margin-top:10px">
+          <a class="calendly-link" href="https://calendly.com/mitaparcelin/30min" target="_blank">📅 calendly.com/mitaparcelin/30min</a>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">B</div>
+        <div class="step-title">CS Bantu Isikan</div>
+        <div class="step-desc">CS tanya ketersediaan waktu customer, lalu CS yang mengisikan slot di Calendly atas nama mereka.</div>
+        <div class="script-box" style="margin-top:8px;font-size:11px">
+          <strong>Script tanya ketersediaan</strong>
+          "Kak, kira-kira kakak available di hari apa dan jam berapa ya untuk kita ngobrol 15–20 menit? Aku bantu buatkan jadwalnya 😊"
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight h-teal">
+      <strong>Pengecualian — Tanpa Discovery Meeting</strong>
+      Leads tidak wajib Discovery Meeting jika: mereka menolak 2x, TETAPI sudah memberikan <strong>semua informasi kebutuhan</strong> yang cukup untuk langsung dihitung harganya (produk jelas, qty jelas, spesifikasi lengkap, timeline ada). Dalam kondisi ini, CS bisa langsung memindahkan leads ke pipeline <span class="badge badge-amber">MQL Perlu Hitung Harga</span>.
+    </div>
+
+    <div class="script-box" style="margin-top:12px">
+      <strong>Script Mengajak Discovery Meeting</strong>
+      "Kak, boleh aku minta waktu 15–20 menit ya untuk kita ngobrol lebih lanjut soal kebutuhannya? Supaya aku bisa bantu carikan solusi packaging yang paling sesuai buat kakak. Bisa via WA call atau video call sesuai preferensi kakak 😊"
+    </div>
+    <div class="script-box">
+      <strong>Script Follow-up Setelah Penolakan Pertama</strong>
+      "Kak, tenang aja tidak memakan waktu lama kok, cuma 15 menit. Tujuannya supaya aku bisa kasih penawaran yang benar-benar pas dan tidak buang waktu kakak juga. Gimana kak, ada slot kosong minggu ini? 🙏"
+    </div>
+  </div>
+
+  <!-- 6.4 DATA COLLECTION MQL -->
+  <div class="sec-div"><div class="sec-div-line"></div><span class="sec-div-label">Poin 4 — Data Collection MQL</span><div class="sec-div-line"></div></div>
+
+  <div class="section-card" style="border:2px solid var(--teal)">
+    <div class="card-title">📋 6.4 Formulir Data Wajib Saat Masuk Pipeline MQL</div>
+    <p style="font-size:14px;color:var(--ink2);margin-bottom:14px">Setelah Discovery Meeting (atau setelah leads dinyatakan qualified tanpa disc meet), CS <strong>wajib meminta data berikut</strong> dan memasukkannya ke informasi leads di Kommo:</p>
+
+    <div class="data-form">
+      <div class="data-field required">
+        <span class="df-label">Nama</span>
+        <span class="df-value">Nama lengkap PIC / contact person</span>
+      </div>
+      <div class="data-field required">
+        <span class="df-label">Jabatan / Bagian</span>
+        <span class="df-value">Posisi di perusahaan</span>
+      </div>
+      <div class="data-field required">
+        <span class="df-label">Nama Perusahaan</span>
+        <span class="df-value">PT / CV / nama usaha resmi</span>
+      </div>
+      <div class="data-field required">
+        <span class="df-label">Nama Brand</span>
+        <span class="df-value">Brand yang akan tertera di packaging</span>
+      </div>
+      <div class="data-field required">
+        <span class="df-label">Email Perusahaan</span>
+        <span class="df-value">Email aktif untuk pengiriman dokumen</span>
+      </div>
+      <div class="data-field required">
+        <span class="df-label">No. HP / WA</span>
+        <span class="df-value">Nomor yang aktif dihubungi</span>
+      </div>
+      <div class="data-field required" style="grid-column:1/-1">
+        <span class="df-label">Alamat Lengkap Pengiriman</span>
+        <span class="df-value">Jalan, RT/RW, Kelurahan, Kecamatan, Kota, Provinsi, Kode Pos</span>
+      </div>
+      <div class="data-field required" style="grid-column:1/-1">
+        <span class="df-label">Deadline</span>
+        <span class="df-value">Tanggal packaging harus sudah diterima customer</span>
+      </div>
+    </div>
+
+    <div class="highlight h-purple" style="margin-top:14px">
+      <strong>Kenapa ini wajib dimasukkan ke Kommo?</strong>
+      Data ini menjadi <strong>database pelanggan</strong> Parcelinpack. Sewaktu-waktu kita ingin melakukan broadcast berdasarkan industri, jenis produk, atau perusahaan tertentu — kita bisa menarik datanya langsung dari Kommo. <strong>Jangan simpan hanya di WA atau catatan pribadi.</strong>
+    </div>
+
+    <div class="script-box" style="margin-top:10px">
+      <strong>Script Meminta Data</strong>
+      "Kak, untuk aku bisa siapkan penawaran yang lengkap dan tepat, boleh aku minta beberapa data ini ya: [kirim format data]. Data ini juga aku simpan di sistem kita supaya kalau kakak mau order lagi ke depannya, prosesnya bisa lebih cepat 😊"
+    </div>
+  </div>
+
+  <!-- 6.5 QUOTATION MEETING -->
+  <div class="sec-div"><div class="sec-div-line"></div><span class="sec-div-label">Poin 5 — Quotation Meeting</span><div class="sec-div-line"></div></div>
+
+  <div class="section-card" style="border:2px solid var(--purple)">
+    <div class="card-title">📊 6.5 SOP Quotation Meeting</div>
+    <p style="font-size:14px;color:var(--ink2);margin-bottom:12px">Setelah Tim Hitung Harga menyelesaikan kalkulasi, CS membuat <strong>dokumen Quotation di Google Docs (export PDF)</strong> dan menyampaikannya melalui Quotation Meeting — <strong>bukan sekadar kirim PDF</strong>.</p>
+
+    <div class="highlight h-orange" style="margin-bottom:14px">
+      <strong>Mengapa Wajib via Meeting, Bukan Kirim PDF Langsung?</strong>
+      Jika PDF langsung dikirim, customer akan <strong>langsung fokus ke angka harga</strong> tanpa memahami nilai dan spesifikasinya. Melalui Quotation Meeting, kita punya kesempatan untuk menjelaskan setiap elemen penawaran, menjawab pertanyaan secara langsung, dan membahas perubahan spesifikasi jika ada — jauh lebih efektif.
+    </div>
+
+    <div class="label-sm">Langkah Mengatur Quotation Meeting</div>
+    <ol class="numlist" style="margin-bottom:14px">
+      <li><span class="num-dot">1</span>Siapkan dokumen Quotation di Google Docs — export menjadi PDF</li>
+      <li><span class="num-dot">2</span>Hubungi Tim Hitung Harga untuk dipandu mengisi detail meeting</li>
+      <li><span class="num-dot">3</span>Isi jadwal meeting via link Calendly berikut:</li>
+    </ol>
+
+    <a class="calendly-link calendly-link-teal" href="https://calendly.com/bizdev-parcelin/30min" target="_blank">📅 calendly.com/bizdev-parcelin/30min</a>
+
+    <div class="label-sm" style="margin-top:14px">Yang Dijelaskan Saat Quotation Meeting</div>
+    <ul class="checklist">
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Breakdown harga per spesifikasi yang telah diminta customer</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Material & metode produksi yang dipilih beserta keunggulannya</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Estimasi timeline produksi dari awal hingga pengiriman</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Garansi kualitas & sistem QC Parcelinpack</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Alur kerja Parcelin sebagai Worry-Free Partner</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>MOQ dan opsi penyesuaian jika ada perubahan spesifikasi atau budget</li>
+    </ul>
+
+    <div class="script-box" style="margin-top:12px">
+      <strong>Script Ajak Quotation Meeting</strong>
+      "Kak, penawaran harganya sudah aku siapkan sesuai spesifikasi yang Kak minta. Boleh aku minta waktu 10–15 menit untuk aku jelaskan langsung mengenai detail penawarannya ya Kak? Supaya aku bisa pastikan semua detailnya benar-benar sesuai kebutuhan Kak dan kalau ada yang perlu disesuaikan bisa kita diskusikan langsung 😊"
+    </div>
+  </div>
+
+  <!-- 6.6 NEGOSIASI & INVOICE -->
+  <div class="sec-div"><div class="sec-div-line"></div><span class="sec-div-label">Poin 6 — Negosiasi & Invoice</span><div class="sec-div-line"></div></div>
+
+  <div class="section-card">
+    <div class="card-title">🧾 6.6 Proses Negosiasi hingga Invoice</div>
+
+    <div class="three-col" style="margin-bottom:14px">
+      <div class="step-card">
+        <div class="step-num" style="background:var(--orange)">1</div>
+        <div class="step-title">Negosiasi</div>
+        <div class="step-desc">Diskusikan harga, spesifikasi, atau syarat hingga tercapai kesepakatan. Koordinasikan diskon dengan atasan.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="background:var(--purple)">2</div>
+        <div class="step-title">Buat Invoice</div>
+        <div class="step-desc">CS membuat dokumen Invoice di Google Docs, kemudian export menjadi PDF untuk dikirimkan ke customer.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num" style="background:var(--teal)">3</div>
+        <div class="step-title">Kirim + T&C</div>
+        <div class="step-desc">Kirimkan PDF Invoice bersamaan dengan PDF Terms & Conditions Parcelinpack ke customer.</div>
+      </div>
+    </div>
+
+    <div class="highlight h-amber">
+      <strong>Penting</strong>
+      Invoice dan Terms & Conditions Parcelinpack <strong>selalu dikirimkan bersamaan</strong>. Customer harus memahami T&C sebelum melakukan pembayaran DP. Ini melindungi kedua belah pihak.
+    </div>
+  </div>
+
+  <!-- 6.7 POST-CLOSING MONITORING -->
+  <div class="sec-div"><div class="sec-div-line"></div><span class="sec-div-label">Poin 7 — Post-Closing Monitoring</span><div class="sec-div-line"></div></div>
+
+  <div class="section-card teal">
+    <div class="card-title">👀 6.7 Monitoring Setelah Closing</div>
+    <p style="font-size:14px;margin-bottom:12px">Tugas CS <strong>tidak berhenti setelah deal</strong>. CS berperan sebagai jembatan antara customer dan tim internal (Project & Produksi).</p>
+    <ul class="checklist">
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Aktif mengejar dan memantau tim project & produksi terkait progress order</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Kabarkan <strong>progress update secara berkala</strong> ke customer (minimal setiap milestone penting)</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pantau tahapan: Desain → Review Desain → Approval Desain → Pembuatan Sampel</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Informasikan ke customer jika ada keterlambatan — jangan biarkan customer bertanya duluan</li>
+    </ul>
+
+    <div class="script-box" style="margin-top:12px">
+      <strong>Script Progress Update ke Customer</strong>
+      "Halo Kak [nama], mau update progress pesanan kakak ya 😊 Saat ini sudah masuk tahap [tahap]. Estimasi [tahap berikutnya] sekitar [waktu]. Aku terus pantau ya kak, kalau ada update akan aku kabarin lagi 🙏"
+    </div>
+  </div>
+
+  <!-- 6.8 TECHNICAL MEETING -->
+  <div class="sec-div"><div class="sec-div-line"></div><span class="sec-div-label">Poin 8 — Technical Meeting</span><div class="sec-div-line"></div></div>
+
+  <div class="section-card" style="border:2px solid var(--teal)">
+    <div class="card-title">🔬 6.8 Technical Meeting Pasca Sampel Jadi</div>
+    <p style="font-size:14px;color:var(--ink2);margin-bottom:12px">Setelah sampel fisik selesai dibuat, CS mengundang customer untuk <strong>Technical Meeting bersama Project Manager</strong>. Ini adalah sesi review sampel dan konfirmasi spesifikasi sebelum produksi massal.</p>
+
+    <div class="two-col" style="margin-bottom:14px">
+      <div>
+        <div class="label-sm">Tujuan Technical Meeting</div>
+        <ul class="checklist">
+          <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Review dan approval sampel fisik bersama PM</li>
+          <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Konfirmasi spesifikasi akhir sebelum cetak massal</li>
+          <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Diskusi teknis material & finishing jika ada pertanyaan</li>
+          <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tanda tangan approval customer untuk mulai produksi massal</li>
+        </ul>
+      </div>
+      <div>
+        <div class="label-sm">Langkah CS</div>
+        <ol class="numlist">
+          <li><span class="num-dot teal">1</span>Informasikan ke customer bahwa sampel sudah jadi</li>
+          <li><span class="num-dot teal">2</span>Isi link Calendly berikut untuk Technical Meeting</li>
+          <li><span class="num-dot teal">3</span>Konfirmasi jadwal ke Project Manager</li>
+        </ol>
+      </div>
+    </div>
+
+    <a class="calendly-link calendly-link-teal" href="https://calendly.com/project-parcelinpack/30min" target="_blank">📅 calendly.com/project-parcelinpack/30min</a>
+
+    <div class="script-box" style="margin-top:12px">
+      <strong>Script Ajak Technical Meeting</strong>
+      "Halo Kak [nama], kabar baik! Sampel packaging kakak sudah jadi 🎉 Aku mau mengundang kakak untuk Technical Meeting bareng Project Manager kita ya kak, supaya kakak bisa langsung review dan kita konfirmasikan semua detailnya sebelum masuk produksi massal. Ada waktu kapan kak? 😊"
+    </div>
+  </div>
+
+  <!-- RINGKASAN PIPELINE -->
+  <div class="section-card dark" style="margin-top:16px">
+    <div class="card-title">🗺️ Ringkasan Alur Kommo — Dari Leads sampai Closing</div>
+    <table class="rule-table" style="color:rgba(255,255,255,.9)">
+      <tr style="border-bottom:1px solid rgba(255,255,255,.15)">
+        <th style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">Stage</th>
+        <th style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">Trigger Masuk</th>
+        <th style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">Aksi Wajib CS</th>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Leads Masuk</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Iklan direspons customer</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Siap greeting dalam &lt;15 menit</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Kontak Awal</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">CS sudah greeting</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Beri nama "CS X — Nama Leads" + tambahkan tags</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Discovery Meeting</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Leads setuju disc meet</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Isi Calendly mitaparcelin + catat hasil disc meet</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>MQL Perlu Hitung Harga</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Leads qualified, data lengkap</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Input 8 data ke Kommo, teruskan ke Tim Hitung Harga</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>MQL Sudah Hitung</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Tim Hitung Harga selesai</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Buat Quotation di GDocs, jadwalkan Quotation Meeting</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Quotation Meeting</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Jadwal meeting terkonfirmasi</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Isi Calendly bizdev-parcelin, koordinasi Tim Hitung Harga</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Negosiasi</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Ada diskusi harga/spec</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Koordinasi diskon dengan atasan, update Kommo</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Invoice</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Deals tercapai</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Buat Invoice di GDocs + kirim PDF T&C bersamaan</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Penjualan Berhasil</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">DP masuk</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Pantau produksi, update customer, jadwalkan Tech Meeting</td>
+      </tr>
+      <tr>
+        <td><strong>Penjualan Gagal</strong></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Leads drop di mana saja</td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Catat alasan kegagalan di Kommo untuk evaluasi</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     7. SOP LEAD MASUK & PERCAKAPAN WA
+══════════════════════════════════ -->
+<div id="s7">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#E0F7F4">📱</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">7. SOP Lead Masuk & Alur Percakapan WA</h2>
+      <p class="chapter-sub">WA masuk = customer datang ke toko. Sambut dengan hangat dan struktur percakapan jelas.</p>
+    </div>
+  </div>
+
+  <div class="section-card purple">
+    <div class="card-title">🔑 Rumus Dasar CS Parcelin</div>
+    <div class="highlight h-purple">
+      <strong>Formula Percakapan</strong>
+      <strong style="font-size:15px;color:var(--purple-d)">Jawab Pertanyaan + Beri Informasi Tambahan / Edukasi + Tutup dengan Pertanyaan Pilihan</strong>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">📋 Urutan Alur Percakapan WA</div>
+    <ol class="numlist">
+      <li><span class="num-dot">1</span>Sapa hangat, perkenalkan nama CS, tanyakan nama customer</li>
+      <li><span class="num-dot">2</span>Ajak customer simpan nomor WA CS (agar bisa kirim promo)</li>
+      <li><span class="num-dot">3</span>Gali kebutuhan customer dengan pertanyaan terbuka</li>
+      <li><span class="num-dot">4</span>Kirim katalog atau price list yang relevan</li>
+      <li><span class="num-dot">5</span>Jelaskan keunggulan Parcelinpack (USP)</li>
+      <li><span class="num-dot">6</span>Tawarkan solusi & upsell jika ada peluang</li>
+      <li><span class="num-dot">7</span>Jika custom, tanyakan spesifikasi lengkap</li>
+      <li><span class="num-dot">8</span>Ajak Discovery Meeting (min. 2x ajakan jika ditolak)</li>
+      <li><span class="num-dot">9</span>Jika qualified → pindahkan ke pipeline MQL di Kommo</li>
+    </ol>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">💬 Contoh Percakapan Ideal</div>
+    <div class="script-box">
+      <strong>Customer Memulai</strong>
+      Cust: "Halo kak, aku mau tanya packaging box gitu"
+    </div>
+    <div class="script-box">
+      <strong>CS Greeting</strong>
+      CS: "Hai kak! Terima kasih sudah hubungi Parcelinpack 😊 Perkenalkan saya Rani, yang akan bantu kakak hari ini. Boleh tahu dengan kakak siapa dan dari kota mana ya? 🥰"
+    </div>
+    <div class="script-box">
+      <strong>Customer Membalas</strong>
+      Cust: "Saya Putri dari Semarang"
+    </div>
+    <div class="script-box">
+      <strong>CS Lanjut Gali Kebutuhan</strong>
+      CS: "Salam kenal Kak Putri 🤗 Semoga sehat selalu ya kak. Boleh tahu produk kakak apa nih? Aku bantu carikan packaging yang cocok dan bisa naikin branding kakak 😊"
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="section-card teal">
+      <div class="card-title">✅ Lakukan Ini</div>
+      <ul class="checklist">
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Jika chat hanya minta harga → layani + edukasi + tanya balik</li>
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Jika chat "ping" / "katalog" → respons ramah tetap</li>
+        <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Kirim reminder simpan nomor sekali jika belum save</li>
+      </ul>
+    </div>
+    <div class="section-card orange">
+      <div class="card-title">⚠️ Hindari Ini</div>
+      <ul class="checklist">
+        <li><span class="ci ci-x"><svg viewBox="0 0 10 10"><path d="M3 3l4 4M7 3l-4 4" stroke="#E53E3E" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>Spam follow-up jika tidak ada balasan lebih dari 3 hari</li>
+        <li><span class="ci ci-x"><svg viewBox="0 0 10 10"><path d="M3 3l4 4M7 3l-4 4" stroke="#E53E3E" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>Menutup percakapan tanpa tawaran atau pertanyaan lanjutan</li>
+        <li><span class="ci ci-x"><svg viewBox="0 0 10 10"><path d="M3 3l4 4M7 3l-4 4" stroke="#E53E3E" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></span>Kirim quotation sebelum kebutuhan benar-benar jelas</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     8. STRATEGI KOMUNIKASI
+══════════════════════════════════ -->
+<div id="s8">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#FFF0E8">🎯</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">8. Strategi Komunikasi Penjualan</h2>
+      <p class="chapter-sub">Teknik-teknik untuk meningkatkan conversion dan mempercepat closing</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">8.1 Formula 3-in-1</div>
+    <div class="three-col">
+      <div class="step-card"><div class="step-num">J</div><div class="step-title">Jawab</div><div class="step-desc">Jawab pertanyaan customer secara tepat dan informatif</div></div>
+      <div class="step-card"><div class="step-num">E</div><div class="step-title">Edukasi</div><div class="step-desc">Beri nilai tambah atau informasi yang customer belum ketahui</div></div>
+      <div class="step-card"><div class="step-num">T</div><div class="step-title">Tanya Balik</div><div class="step-desc">Tutup dengan pertanyaan pilihan untuk arahkan ke keputusan</div></div>
+    </div>
+    <div class="script-box" style="margin-top:12px">
+      <strong>Contoh Penerapan</strong>
+      Cust: "Kak, harga box 20x20 berapa ya?"<br/>
+      CS: "Box ukuran 20x20 harganya Rp 2.000/pcs ya kak 🥰 Yang ini kualitas premium dan sering dipakai brand skincare & hampers. Kakak lebih suka polos atau ada sablon brand-nya kak?"
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="section-card purple">
+      <div class="card-title">🔒 8.2 Teknik Closing</div>
+      <ul class="checklist">
+        <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>"Mau aku bantu totalkan dulu ya kak?"</li>
+        <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>"Mau langsung mulai proses hari ini kak?"</li>
+        <li><span class="ci ci-purple"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#5B35D5" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>"Kakak mau ambil 100pcs atau langsung 300pcs kak?"</li>
+      </ul>
+    </div>
+    <div class="section-card amber">
+      <div class="card-title">⚡ 8.3 Teknik Urgensi</div>
+      <ul class="checklist">
+        <li><span class="ci ci-amber"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#F5A623" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>"Promo free ongkir hari ini tinggal 5 slot kak."</li>
+        <li><span class="ci ci-amber"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#F5A623" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>"Transfer sebelum jam 3, langsung masuk proses desain hari ini."</li>
+        <li><span class="ci ci-amber"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#F5A623" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>"Antrian produksi sedang ramai kak, slot minggu ini terbatas."</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card teal">
+    <div class="card-title">📈 8.4 Teknik Upselling</div>
+    <div class="script-box">
+      <strong>Contoh Upsell Qty</strong>
+      "Kak, kalau ambil 500pcs lebih hemat loh. Mau aku buatkan hitungan selisihnya?"
+    </div>
+    <div class="script-box">
+      <strong>Contoh Upsell Produk Tambahan</strong>
+      "Kak, sekalian tambahin stiker thank you juga yuk, cuma Rp 30/pcs aja dan bisa naikin branding kakak ✨"
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     9. Q&A
+══════════════════════════════════ -->
+<div id="s9">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#FEF6E4">❓</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">9. Daftar Jawaban Q&A Customer</h2>
+      <p class="chapter-sub">Script siap pakai untuk pertanyaan-pertanyaan umum</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div>
+        <span class="badge badge-purple">Q1</span><strong style="font-size:14px;margin-left:8px">"Belum ada desain, bisa order nggak?"</strong>
+        <div class="script-box" style="margin-top:6px"><strong>Jawaban</strong>"Gak apa-apa kak. Nanti kalau udah transfer, kakak bisa konsultasi desain bareng tim kami kok. Tenang aja 😄"</div>
+      </div>
+      <hr class="divider"/>
+      <div>
+        <span class="badge badge-purple">Q2</span><strong style="font-size:14px;margin-left:8px">"Budget saya terbatas."</strong>
+        <div class="script-box" style="margin-top:6px"><strong>Jawaban</strong>"Boleh kak share kisaran budgetnya. Aku bantu rekomendasikan packaging yang tetap cantik tapi sesuai kantong 🥰"</div>
+      </div>
+      <hr class="divider"/>
+      <div>
+        <span class="badge badge-purple">Q3</span><strong style="font-size:14px;margin-left:8px">"Mahal banget kak."</strong>
+        <div class="script-box" style="margin-top:6px"><strong>Jawaban</strong>"Huhuu gak mahal kok kak 😁 Karena bahan yang kita pakai kualitas premium, awet dan bisa naikin value produk kakak. Kakak inginnya di budget berapa kak?"</div>
+      </div>
+      <hr class="divider"/>
+      <div>
+        <span class="badge badge-purple">Q4</span><strong style="font-size:14px;margin-left:8px">"Ada sample gratis nggak?"</strong>
+        <div class="script-box" style="margin-top:6px"><strong>Jawaban</strong>"Ada 2 opsi kak: (1) Free sample: untuk pemesanan fix setelah DP, kami buatkan dulu baru cetak massal. (2) Sample berbayar: biayanya 4–5x harga produk karena diproduksi satuan."</div>
+      </div>
+      <hr class="divider"/>
+      <div>
+        <span class="badge badge-purple">Q5</span><strong style="font-size:14px;margin-left:8px">"Lama produksinya berapa hari?"</strong>
+        <div class="script-box" style="margin-top:6px"><strong>Jawaban</strong>"Estimasi: Sticker/card: 3–5 hari kerja | Produk sablon/tag label: 10–14 hari kerja | Custom box: 14–30 hari kerja tergantung antrian & jumlah kak 😊"</div>
+      </div>
+      <hr class="divider"/>
+      <div>
+        <span class="badge badge-purple">Q6</span><strong style="font-size:14px;margin-left:8px">"Bisa lebih murah nggak?"</strong>
+        <div class="script-box" style="margin-top:6px"><strong>Jawaban</strong>"Kalau jumlah pesanan ditambah bisa banget kak 🥰 Misal 300pcs, aku bantu hitungkan harga spesialnya. Mau kak?"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     10. HANDLING KOMPLAIN
+══════════════════════════════════ -->
+<div id="s10">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#FFF0F0">🛡️</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">10. Handling Komplain</h2>
+      <p class="chapter-sub">SOP lengkap menangani ketidakpuasan customer dengan profesional</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">10.1 Prinsip Utama Saat Komplain</div>
+    <ol class="numlist">
+      <li><span class="num-dot orange">1</span><strong>Tenang & Empatik</strong> — Jangan membalas dengan defensif atau emosi. Validasi perasaan customer dulu.</li>
+      <li><span class="num-dot orange">2</span><strong>Dengarkan Sepenuhnya</strong> — Biarkan customer menyelesaikan keluhan sebelum memberikan respons.</li>
+      <li><span class="num-dot orange">3</span><strong>Minta Maaf Tulus</strong> — Tanpa embel-embel pembelaan diri di awal.</li>
+      <li><span class="num-dot orange">4</span><strong>Tawarkan Solusi Konkret</strong> — Bukan janji kosong. Koordinasikan dulu dengan atasan.</li>
+      <li><span class="num-dot orange">5</span><strong>Follow-up Sampai Tuntas</strong> — Komplain tidak boleh dibiarkan menggantung.</li>
+    </ol>
+  </div>
+
+  <div class="two-col">
+    <div class="section-card">
+      <div class="card-title">📦 Jika Barang Rusak</div>
+      <div class="script-box"><strong>Script</strong>"Mohon maaf banget ya kak 🙏 Aku turut sedih denger barangnya nggak sesuai harapan. Kakak boleh kirimkan foto/video produknya ya kak? Aku bantu teruskan ke tim produksi."</div>
+    </div>
+    <div class="section-card">
+      <div class="card-title">⏰ Jika Barang Telat</div>
+      <div class="script-box"><strong>Script</strong>"Maaf banget ya kak 🙏 Kami juga kecewa kalau pengiriman terlambat. Aku bantu cek langsung ke tim produksi dan update kakak segera ya."</div>
+    </div>
+  </div>
+
+  <div class="section-card teal">
+    <div class="card-title">10.2 Langkah Tindakan Pasca Komplain</div>
+    <ol class="numlist">
+      <li><span class="num-dot teal">1</span>Hubungi Project Manager segera</li>
+      <li><span class="num-dot teal">2</span>Konsultasikan dengan atasan untuk solusi terbaik</li>
+      <li><span class="num-dot teal">3</span>Ajukan solusi: ganti barang / potongan harga / pengiriman ulang</li>
+      <li><span class="num-dot teal">4</span>Konfirmasi ulang ke customer sampai puas</li>
+      <li><span class="num-dot teal">5</span>Catat komplain di Kommo untuk evaluasi kualitas</li>
+    </ol>
+    <div class="highlight h-amber" style="margin-top:12px">
+      <strong>Aturan Wajib</strong>
+      Untuk komplain yang bersifat serius atau customer sangat emosional — CS WAJIB menelepon, bukan hanya chat. Respons via telepon menunjukkan keseriusan dan mempercepat de-eskalasi situasi.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     11. FOLLOW-UP LEAD & INVOICE
+══════════════════════════════════ -->
+<div id="s11">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#EDE8FF">🔔</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">11. Follow-up Lead & Invoice</h2>
+      <p class="chapter-sub">Script bertahap untuk leads yang tidak merespons dan invoice yang belum dibayar</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">11.1 Follow-up Lead Tidak Respons</div>
+    <div class="script-box">
+      <strong>H+1 (1 hari tidak dibalas)</strong>
+      "Halo kak [nama], Rani dari Parcelinpack. Mau memastikan pesan sebelumnya sudah terbaca ya kak 😊 Ada yang bisa aku bantu lebih lanjut kak?"
+    </div>
+    <div class="script-box">
+      <strong>H+2 (2 hari tidak dibalas)</strong>
+      "Kak [nama], barangkali kakak belum sempat membalas 😊 Aku kirimkan ulang info [produk/penawaran] ya kak. Kalau ada pertanyaan, aku siap bantu kapan aja."
+    </div>
+    <div class="script-box">
+      <strong>H+3 (3 hari tidak dibalas — terakhir)</strong>
+      "Kakak jangan musuhin aku dong kak 😢 Kalau kakak belum jadi order, gapapa kok. Tapi mungkin bisa kasih tahu aku alasannya untuk evaluasi tim kami 🙏"
+    </div>
+  </div>
+
+  <div class="section-card orange">
+    <div class="card-title">11.2 Follow-up Invoice Belum Transfer</div>
+    <div class="script-box">
+      <strong>H+1</strong>
+      "Kak [nama], mau mengingatkan pesanan kakak senilai Rp xxx belum ditransfer ya kak 🙏 Kebetulan hari ini masih ada slot free ongkir juga 😍 Kakak rencana transfer jam berapa ya?"
+    </div>
+    <div class="script-box">
+      <strong>H+2</strong>
+      "Halo kak, pesanan sudah aku prioritaskan ya di antrian. Kalau ada kendala transfer, feel free banget buat sharing ya kak. Aku bantu sebisanya 🙏"
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     12. SURVEY KEPUASAN
+══════════════════════════════════ -->
+<div id="s12">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#E0F7F4">⭐</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">12. Survey Kepuasan Pelanggan</h2>
+      <p class="chapter-sub">Memastikan produk sampai aman dan menggali feedback untuk peningkatan layanan</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">12.1 Waktu Telepon Survey</div>
+    <div class="two-col">
+      <div class="kpi-box"><div class="kpi-num">H+3</div><div class="kpi-label">JNE / J&T / Sicepat setelah pengiriman</div></div>
+      <div class="kpi-box"><div class="kpi-num">H+7</div><div class="kpi-label">Dakota / Cargo setelah pengiriman</div></div>
+    </div>
+  </div>
+
+  <div class="section-card purple">
+    <div class="card-title">12.2 Script Telepon Survey</div>
+    <div class="script-box">
+      <strong>Pembuka</strong>
+      "Selamat siang kak [nama], saya [nama CS] dari Parcelinpack. Ingin memastikan apakah paketnya sudah sampai dengan aman?"
+    </div>
+    <ol class="numlist" style="margin-top:10px">
+      <li><span class="num-dot">1</span>"Sudah dibuka kak?"</li>
+      <li><span class="num-dot">2</span>"Ada kendala atau semua aman ya kak?"</li>
+      <li><span class="num-dot">3</span>"Dari skala 1–10, seberapa puas kakak dengan produk kami?"</li>
+      <li><span class="num-dot">4</span>"Ada saran agar kami bisa lebih baik lagi?"</li>
+      <li><span class="num-dot">5</span>"Kenapa akhirnya memutuskan pesan packaging dari Parcelin?"</li>
+    </ol>
+    <div class="script-box" style="margin-top:10px">
+      <strong>Penutup + Penawaran Repeat Order</strong>
+      "Terima kasih banyak kak atas waktunya, semoga packagingnya bisa bantu bisnis kakak makin keren ya ✨ Oiya kak, sebagai bentuk terima kasih, kami kasih potongan 5% buat order berikutnya ya 🥰"
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     13. REPEAT ORDER & LOYALITAS
+══════════════════════════════════ -->
+<div id="s13">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#E0F7F4">🔄</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">13. Repeat Order & Strategi Loyalitas</h2>
+      <p class="chapter-sub">Customer yang sudah pernah beli adalah aset terbesar — jaga dan kembangkan</p>
+    </div>
+  </div>
+
+  <div class="section-card teal">
+    <div class="card-title">13.1 Strategi Repeat Order</div>
+    <ol class="numlist">
+      <li><span class="num-dot teal">1</span>Follow-up di estimasi waktu habis stok customer</li>
+      <li><span class="num-dot teal">2</span>Tawarkan rekap order sebelumnya agar customer tidak repot</li>
+      <li><span class="num-dot teal">3</span>Beri diskon khusus repeat customer (koordinasi atasan)</li>
+      <li><span class="num-dot teal">4</span>Tawarkan produk baru atau upsell produk pendamping</li>
+    </ol>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">13.2 Script Follow-up Repeat Order</div>
+    <div class="script-box">
+      <strong>Script Sapa & Gali</strong>
+      "Halo kak [nama], apa kabar? Aku [nama CS] dari Parcelinpack 😊 Aku cuma mau menyapa aja nih. Gimana stok packaging sebelumnya kak? Sudah habis atau masih ada?"
+    </div>
+    <div class="script-box">
+      <strong>Script Tawarkan Repeat</strong>
+      "Kalau kakak mau pesan lagi, aku bantu rekapin order sebelumnya dan bisa langsung proses ya kak. Kakak tidak perlu repot kirim brief dari awal lagi 😊"
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">13.3 SOP Saat Customer Minta Diskon</div>
+    <div class="three-col">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-title">Batasi Waktu Pembayaran</div>
+        <div class="step-desc">"Bisa kak, tapi pembayaran maksimal pukul 15.00 ya kak supaya bisa [nama cs] bantu untuk dapat harga lama."</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-title">Tambah Quantity</div>
+        <div class="step-desc">"Mau di 200pcs sekalian kak? Kalau 200pcs boleh [nama cs] kasih di Rp xxx deh kak khusus buat kakak."</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-title">Kurangi Fitur</div>
+        <div class="step-desc">"Bisa kak harga segitu, tapi nanti kami ganti bahannya ke xxx ya kak / sablonnya 1 warna ya kak."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     14. KPI & EVALUASI
+══════════════════════════════════ -->
+<div id="s14">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#EDE8FF">📊</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">14. KPI & Evaluasi Tim CS</h2>
+      <p class="chapter-sub">Indikator kinerja yang wajib dipahami dan dikejar setiap CS</p>
+    </div>
+  </div>
+
+  <div class="section-card dark">
+    <div class="card-title">14.1 Indikator KPI Utama</div>
+    <table class="rule-table" style="color:rgba(255,255,255,.9)">
+      <tr>
+        <th style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">Indikator</th>
+        <th style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">Target Minimum</th>
+        <th style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.6)">Penjelasan</th>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Cold Leads → MQL</strong></td>
+        <td><span class="badge badge-green">≥ 9%</span></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Persentase leads dingin yang berhasil naik ke stage MQL — ukuran kualitas kualifikasi CS</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Discovery Meeting Harian</strong></td>
+        <td><span class="badge badge-green">3–4 / hari</span></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Jumlah Discovery Meeting yang berhasil dilakukan per CS per hari kerja</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Target Revenue per CS</strong></td>
+        <td><span class="badge badge-green">Rp 150 jt / bulan</span></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Total nilai transaksi closing yang digenerate oleh setiap CS per bulan</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,.1)">
+        <td><strong>Response Time</strong></td>
+        <td><span class="badge badge-green">⬍ 10 menit</span></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Waktu respons dari lead masuk pertama kali</td>
+      </tr>
+      <tr>
+        <td><strong>Komplain Ditangani</strong></td>
+        <td><span class="badge badge-green">100%</span></td>
+        <td style="color:rgba(255,255,255,.7);font-size:12px">Tidak ada komplain yang dibiarkan tanpa resolusi</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="three-col" style="margin-bottom:16px">
+    <div class="kpi-box">
+      <div class="kpi-num" style="font-size:20px">≥ 9%</div>
+      <div class="kpi-label">Cold Leads ke MQL</div>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-num" style="font-size:20px">3–4x</div>
+      <div class="kpi-label">Discovery Meeting / hari</div>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-num" style="font-size:18px">150 jt</div>
+      <div class="kpi-label">Target / CS / bulan</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="card-title">12.3 Evaluasi Bulanan</div>
+    <p style="font-size:14px;color:var(--ink2);margin-bottom:12px">Setiap akhir bulan, supervisor akan:</p>
+    <ul class="checklist">
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Mengevaluasi data log follow-up dan aktivitas Kommo</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Melihat rasio closing vs jumlah lead masuk</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Melakukan sesi coaching dengan CS untuk perbaikan</li>
+      <li><span class="ci"><svg viewBox="0 0 10 10"><path d="M2 5l2 2 4-4" stroke="#00A98F" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Menganalisa pipeline Kommo — stage mana yang paling banyak drop</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     15. SIMULASI & ROLEPLAY
+══════════════════════════════════ -->
+<div id="s15">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#FFF0E8">🎭</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">15. Simulasi & Roleplay Tipe Customer</h2>
+      <p class="chapter-sub">Latihan menghadapi berbagai karakter customer dalam percakapan nyata</p>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div style="display:flex;flex-direction:column;gap:16px">
+
+      <div>
+        <span class="badge badge-green" style="margin-bottom:8px;display:inline-block">Tipe 1 — Serius Beli</span>
+        <div class="script-box">
+          <strong>Customer</strong>"Kak, saya mau pesan 300pcs box ukuran 15x20. Harganya berapa?"
+        </div>
+        <div class="script-box">
+          <strong>CS Ideal</strong>"Siap kak, aku bantu totalin ya. Kalau 300pcs ukuran 15x20 harganya [X]. Ini kualitas premium dan sering dipake brand F&B kakak. Kakak mau polos atau ada sablon/print kak? 😊"
+        </div>
+      </div>
+
+      <hr class="divider"/>
+
+      <div>
+        <span class="badge badge-amber" style="margin-bottom:8px;display:inline-block">Tipe 2 — Butuh Saran</span>
+        <div class="script-box">
+          <strong>Customer</strong>"Aku mau packaging yang bagus tapi gak tau harus mulai dari mana."
+        </div>
+        <div class="script-box">
+          <strong>CS Ideal</strong>"Tenang kak, aku bantu pilihkan. Produk kakak jualannya apa dan budgetnya kisaran berapa ya? Aku bantu rekomendasikan yang estetik tapi tetap terjangkau 😍"
+        </div>
+      </div>
+
+      <hr class="divider"/>
+
+      <div>
+        <span class="badge badge-purple" style="margin-bottom:8px;display:inline-block">Tipe 3 — Lihat-lihat</span>
+        <div class="script-box">
+          <strong>Customer</strong>"Cuma pengen lihat-lihat aja dulu ya kak."
+        </div>
+        <div class="script-box">
+          <strong>CS Ideal</strong>"Siap kak, aku kirimkan katalog lengkap ya. Feel free buat konsultasi kapan pun. Kalau nanti udah cocok, tinggal kabari aku ya kak 🥰"
+        </div>
+      </div>
+
+      <hr class="divider"/>
+
+      <div>
+        <span class="badge badge-red" style="margin-bottom:8px;display:inline-block">Tipe 4 — Tidak Berniat Beli</span>
+        <div class="script-box">
+          <strong>Customer</strong>"Mahal ya kak, saya pikir-pikir dulu."
+        </div>
+        <div class="script-box">
+          <strong>CS Ideal</strong>"Gapapa banget kak, semoga rezekinya makin lancar ya. Kalau butuh bantu rekomendasi di lain waktu, Parcelin selalu siap bantu kapan aja 🙏"
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-card purple">
+    <div class="card-title">📸 Note Penting untuk Semua Tipe</div>
+    <div class="highlight h-purple">
+      <strong>Rajin-rajin kirim foto / video rekomendasi yang pernah kita buat!</strong>
+      Keputusan pembelian B2B ditentukan oleh <strong>KEPERCAYAAN</strong>. Customer akan lebih percaya jika melihat hasil nyata dari pelanggan sebelumnya. Ini lebih powerful dari kata-kata apapun.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     16. BANK SCRIPT AUTO-TEXT
+══════════════════════════════════ -->
+<div id="s16">
+  <div class="chapter-header">
+    <div class="ch-icon" style="background:#E0F7F4">⚡</div>
+    <div class="ch-text">
+      <h2 class="chapter-title">16. Bank Script Auto-text</h2>
+      <p class="chapter-sub">Template jawaban siap pakai — copy-paste cepat untuk efisiensi CS</p>
+    </div>
+  </div>
+
+  <div class="section-card teal">
+    <div class="card-title">Tujuan Bank Script</div>
+    <p style="font-size:14px">Membantu CS bekerja lebih cepat dan konsisten. Template ini bukan untuk dipakai robotik — tetap sesuaikan dengan nama customer dan konteks percakapan.</p>
+  </div>
+
+  <div class="section-card">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="script-box"><strong>Greeting Pembuka</strong>"Hai kak! Terima kasih sudah hubungi Parcelinpack 😊 Perkenalkan saya [Nama CS], yang akan bantu kakak hari ini. Boleh tahu dengan kakak siapa dan dari kota mana ya? 🥰"</div>
+      <div class="script-box"><strong>Tawaran Katalog</strong>"Aku kirimkan katalog lengkap kami ya kak, ada banyak pilihan packaging yang bisa disesuaikan dengan kebutuhan brand kakak ✨"</div>
+      <div class="script-box"><strong>Ajak Disc Meet (Pertama)</strong>"Kak, boleh aku minta waktu 15–20 menit ya untuk kita ngobrol lebih lanjut? Supaya aku bisa bantu carikan solusi yang paling tepat buat kakak 😊"</div>
+      <div class="script-box"><strong>Ajak Disc Meet (Follow-up)</strong>"Kak, tenang aja tidak memakan waktu lama kok, cuma 15 menit. Tujuannya supaya aku bisa kasih penawaran yang benar-benar pas. Ada slot kosong minggu ini? 🙏"</div>
+      <div class="script-box"><strong>Minta Data MQL</strong>"Kak, untuk persiapan penawaran yang lengkap, boleh bantu isi data berikut ya: [Nama / Jabatan / Nama Perusahaan / Nama Brand / Email / No HP / Alamat Pengiriman / Deadline] 😊"</div>
+      <div class="script-box"><strong>Ajak Quotation Meeting</strong>"Kak, penawaran harganya sudah siap! Boleh aku minta waktu 10–15 menit untuk aku jelaskan detailnya langsung ya kak? Lebih enak kalau kita bahas bareng supaya semua sesuai harapan kakak 😊"</div>
+      <div class="script-box"><strong>Progress Update</strong>"Halo Kak [nama], mau update ya 😊 Pesanan kakak sudah masuk tahap [tahap]. Estimasi [tahap berikutnya] sekitar [waktu]. Aku terus pantau, akan update lagi kalau ada perkembangan 🙏"</div>
+      <div class="script-box"><strong>Ajak Technical Meeting (Sampel Jadi)</strong>"Halo Kak [nama]! Sampel packaging kakak sudah selesai dibuat 🎉 Aku undang kakak untuk Technical Meeting ya kak, bareng Project Manager, supaya kakak bisa langsung review. Kapan kakak ada waktu? 😊"</div>
+    </div>
+  </div>
+
+  <!-- PENUTUP -->
+  <div class="section-card dark" style="margin-top:24px;text-align:center">
+    <div style="font-size:28px;margin-bottom:12px">🎉</div>
+    <h3 style="font-family:'Sora',sans-serif;font-size:20px;color:#fff;margin-bottom:10px">Selamat Bertugas, Tim Parcelinpack!</h3>
+    <p style="color:rgba(255,255,255,.8);font-size:14px;line-height:1.7;max-width:500px;margin:0 auto 16px">
+      Tugas utama kita bukan hanya menjawab pertanyaan — tapi membantu customer merasa yakin untuk membeli. Parcelinpack tidak hanya menjual packaging, tetapi membantu customer membangun brand mereka.
+    </p>
+    <div class="tags" style="justify-content:center">
+      <span class="tag" style="background:rgba(255,255,255,.15);color:#fff">Worry-Free Partner</span>
+      <span class="tag" style="background:rgba(255,255,255,.15);color:#fff">Transparan</span>
+      <span class="tag" style="background:rgba(255,255,255,.15);color:#fff">Timeline Pasti</span>
+      <span class="tag" style="background:rgba(255,255,255,.15);color:#fff">Quality Terjamin</span>
+    </div>
+    <p style="color:rgba(255,255,255,.5);font-size:12px;margin-top:20px">Salam sukses — Tim Manajemen Parcelinpack &nbsp;|&nbsp; Edisi Revisi 2025</p>
+  </div>
+</div>
+
+<!-- FAB -->
+<button class="fab-toc no-print" onclick="document.getElementById('toc').scrollIntoView({behavior:'smooth'})">
+  ☰ Daftar Isi
+</button>
+
+</div>
 </body>
 </html>
